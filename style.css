@@ -576,6 +576,98 @@ article .icon {
 .email-icon {
   height: 2.5rem;
 }
+#contact {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  text-align: center;
+}
+
+.section__text__p1 {
+  font-weight: 600;
+  color: #666;
+  letter-spacing: 1.3px;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 2.5rem;
+  color: #111;
+  letter-spacing: 1.2px;
+  
+}
+
+.contact-cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.contact-card {
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  width: 280px;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-card:hover {
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  transform: translateY(-6px);
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  filter: grayscale(40%) brightness(85%);
+  transition: filter 0.3s ease;
+}
+
+.contact-card:hover .contact-icon {
+  filter: none;
+}
+
+.contact-info h3 {
+  font-size: 1.2rem;
+  margin: 0 0 0.3rem 0;
+  font-weight: 700;
+  color: #0073b1; /* LinkedIn mavisi, email için aynı renk */
+}
+
+.contact-info p {
+  font-size: 1rem;
+  margin: 0;
+  color: #555;
+  word-break: break-word;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  .contact-cards-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.8rem;
+  }
+
+  .contact-card {
+    width: 90%;
+  }
+}
+
 
 /* FOOTER SECTION */
 
