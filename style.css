@@ -158,9 +158,104 @@ section {
 
 /* Sertifika ile Contact arasındaki boşluğu azaltmak için margin ayarları */
 
-#certificates {
-  margin-bottom: 2rem;
+
+/* Slider yapısı */
+.slider-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 20px 0;
 }
+.slider-track {
+  display: inline-flex;
+  animation: scroll 20s linear infinite;
+  gap: 20px;
+}
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Sertifika kutuları */
+
+.certificate-card {
+  display: inline-block;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  width: 250px;
+  padding: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.certificate-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.2;
+  display: -webkit-box;
+  display: box; /* standard */
+  -webkit-line-clamp: 2;
+  line-clamp: 2; /* standard */
+  -webkit-box-orient: vertical;
+  box-orient: vertical; /* standard */
+  overflow: hidden;
+}
+
+.certificate-card p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.4;
+  display: -webkit-box;
+  display: box; /* standard */
+  -webkit-line-clamp: 3;
+  line-clamp: 3; /* standard */
+  -webkit-box-orient: vertical;
+  box-orient: vertical; /* standard */
+  overflow: hidden;
+}
+.certificate-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.certificate-card button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #007BFF;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.certificate-card button:hover {
+    background-color: white;
+  color: #007bff;
+  border: 1px solid #007bff;
+}
+
+/* Popup resmi */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+.popup img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+}
+.close-btn {
+  position: absolute;
+  top: 20px; right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+
 
 #contact {
   display: flex;
