@@ -6,22 +6,13 @@ function toggleMenu() {
 }
 document.querySelectorAll('a[href^="http"]').forEach(link => {
   link.setAttribute('target', '_blank');
-});
- function openPopup(imageSrc) {
-    document.getElementById("popupImage").src = imageSrc;
-    document.getElementById("certificatePopup").style.display = "flex";
-  }
+})
 
-  function closePopup() {
-    document.getElementById("certificatePopup").style.display = "none";
-  }
-  function openPopup(imageUrl) {
-  const popup = document.getElementById('certificatePopup');
-  const popupImage = document.getElementById('popupImage');
-  popupImage.src = imageUrl;
-  popup.style.display = 'flex';
-}
 
+function openPopup() {
+      document.getElementById('popup').style.display = 'block';
+    }
 function closePopup() {
-  document.getElementById('certificatePopup').style.display = 'none';
-}
+      document.getElementById('popup').style.display = 'none';
+    }
+    

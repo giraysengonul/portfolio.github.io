@@ -3,35 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <link rel="stylesheet" href="style.css" />
   <title>Excel Projects</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 20px;
+      background: #f0f2f5;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  
+  </style>
+   <a href="index.html#projects" class="back-button">&larr; Back to Home</a>
 </head>
 <body>
+ 
+ <h1>Excel Projects</h1>
 
-  <a href="index.html#projects" class="back-button">&larr; Back to Home</a>
+  <div class="projects-wrapper" id="projectsWrapper"></div>
 
-  <h1>My Excel Projects</h1>
+  <div class="overlay" id="overlay" onclick="closePopup()"></div>
 
-  <div class="projects-wrapper">
-
-    <div class="project-card">
-      <img
-        src="images/excel-report.png"
-        alt="Excel Report"
-        class="project-image"
-        onerror="this.onerror=null; this.src='https://cdn-icons-png.flaticon.com/512/732/732220.png';"
-      />
-      <h3 class="project-name">Customer Churn Analysis</h3>
-      <p class="project-description">
-        A detailed Excel dashboard for tracking and analyzing customer churn metrics.
-      </p>
-      <a class="project-button" href="https://1drv.ms/x/c/6926805ed8e3c229/EXdRP7iH811Eo3bD4mtyBLYBavfiaUAXlBvtq6NJPiWJGw?e=n6TnaJ" target="_blank">View Project</a>
-    </div>
-
-    <!-- You can copy and paste below to add more Excel projects -->
-
+  <div id="popup" class="popup">
+    <span class="popup-close" onclick="closePopup()">✖</span>
+    <h3 id="popupTitle"></h3>
+    <p id="popupDescription"></p>
+    <ul id="popupList"></ul>
+    <a id="popupLink" href="#" target="_blank" class="popup-link">🔗 Project Link</a>
   </div>
 
+  <script src="projects.js" defer></script>
+  <script>
+    window.onload = () => loadProjects('excel');
+  </script>
 </body>
 </html>
