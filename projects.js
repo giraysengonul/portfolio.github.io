@@ -4,38 +4,23 @@
 }
 const projects = [
     /*Excel*/
-  {
-    id: generateId(),
-    category: 'excel',
-    title: 'U.S. Debt Tracker Project',
-    shortDesc: 'This project analyzes U.S. debt data and forecasts trends with Excel.',
-    longDesc: 'Uses TREND, LINEST and Power Query to analyze debt and predict future trends.',
-    highlights: [
-      'Historical debt trend analysis',
-      'Regression modeling',
-      'Charts & dashboards',
-      'Economic insights'
-    ],
-    link: 'https://example.com/us-debt-project',
-    image: 'https://cdn-icons-png.flaticon.com/512/732/732220.png',
-    alt: 'Excel Report'
-  },
-  {
-    id: generateId(),
-    category: 'excel',
-    title: 'Personal Finance Dashboard',
-    shortDesc: 'A dashboard project that tracks income, expenses and savings using Excel.',
-    longDesc: 'Tracks income, expenses, savings with dynamic charts and budgeting tools.',
-    highlights: [
-      'Income and expense tracking',
-      'Savings goals monitoring',
-      'Monthly reports',
-      'Interactive charts'
-    ],
-    link: 'https://example.com/finance-dashboard',
-    image: 'https://cdn-icons-png.flaticon.com/512/732/732220.png',
-    alt: 'Excel Finance'
-  },
+ {
+  id: generateId(),
+  category: 'excel',
+  title: 'U.S. Debt Tracker Project - Data Analysis',
+  shortDesc: 'An Excel-based financial analysis project examining historical U.S. debt trends and forecasting future growth.',
+  longDesc: 'This project was developed for a Washington D.C.-based debt agency, aiming to analyze and predict trends in public and governmental debt. Using advanced Excel functions like TREND, LINEST, and Power Query, it provides insights into yearly debt percentage increases, seasonal fluctuations, and future projections.',
+  highlights: [
+    'Historical debt trend analysis',
+    'Regression modeling with LINEST',
+    'Interactive dashboards & charts',
+    'Forecasting future debt growth',
+    'Power Query for advanced data manipulation'
+  ],
+  link: 'https://1drv.ms/x/c/6926805ed8e3c229/EXdRP7iH811Eo3bD4mtyBLYBhGwnBO3wDQ-H4UUd-247ZQ?e=AejkAc',
+  image: 'https://cdn-icons-png.flaticon.com/512/732/732220.png',
+  alt: 'Excel Debt Analysis Project'
+},
    /*PowerBI*/
   {
     id: generateId(),
@@ -110,18 +95,18 @@ const projects = [
 {
   id: generateId(),
   category: 'python',
-  title: 'Weather Data Scraper',
-  shortDesc: 'A Python script to scrape and store daily weather data from a public API.',
-  longDesc: 'This project connects to a public weather API, retrieves daily temperature and condition data, and saves it locally as a CSV file for further analysis. Includes error handling, logging, and support for multiple cities.',
+  title: 'Crypto Price Scraper',
+  shortDesc: 'A Python script that scrapes real-time Bitcoin price data from CoinMarketCap and logs it into a CSV file.',
+  longDesc: 'This project utilizes Python and BeautifulSoup to extract the latest Bitcoin price from CoinMarketCap. The collected data is stored in a CSV file for further analysis. The script is designed with scalability in mind, allowing expansion to multiple cryptocurrencies in future updates.',
   highlights: [
-    'REST API integration with requests',
-    'JSON data parsing',
-    'CSV file writing',
-    'Error handling and logging'
+    'Web scraping using BeautifulSoup',
+    'Data extraction from CoinMarketCap',
+    'Automated CSV logging with Pandas',
+    'Error handling and request optimization'
   ],
-  link: 'https://github.com/yourusername/weather-data-scraper',
+  link: 'https://github.com/giraysengonul/Python-Projects/tree/main/Automated-Web-Scraper(Bitcoin)',
   image: 'https://cdn-icons-png.flaticon.com/512/5968/5968350.png',
-  alt: 'Python Weather Scraper Project'
+  alt: 'Python Crypto Price Scraper Project'
 },
 /*SQL*/
 {
