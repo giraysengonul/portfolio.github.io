@@ -150,20 +150,26 @@ a:hover {
 
 section {
   padding-top: 4vh;
-  /* height: 96vh; */  /* Bu satırı kaldırdım */
+  /* height: 96vh; */ 
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
 }
 
-/* Sertifika ile Contact arasındaki boşluğu azaltmak için margin ayarları */
 
 
-/* Slider yapısı */
+/* Slider */
 .slider-container {
   overflow-x: auto;
   white-space: nowrap;
   padding: 20px 0;
+  overflow-x: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+
+}
+.slider-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 .slider-track {
   display: inline-flex;
