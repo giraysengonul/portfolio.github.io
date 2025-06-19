@@ -49,6 +49,16 @@ const certificates = [
     "https://drive.google.com/thumbnail?id=13856cW3yHlBF-UNHZoEnOX51zvmI2n21",
   link:
     "https://www.analystbuilder.com/achievements/verify/JCYFXWKCRA?r=0WenXrjPfCiHD634Th0o1Fv0J",
+},
+{
+  id: 6,
+  title: "Excel for Data Analytics Certificate",
+  description:
+    "Demonstrated proficiency in Excel for data analysis, including advanced functions, PivotTables, Power Query, and data visualization techniques for business decision making.",
+  image:
+    "https://drive.google.com/thumbnail?id=1GplBBkI6vsYtV646JTeM3n9ZxnxWtw-Y",
+  link:
+    "https://www.analystbuilder.com/achievements/verify/5X9SCAPPWX?r=urhgWZRWU7VJf9H2PcRDJdn3B"
 }
 
 ];

@@ -4,6 +4,23 @@
 }
 const projects = [
     /*Excel*/
+    {
+  id: generateId(),
+  category: 'excel',
+  title: 'NYC Bus Delay Analysis',
+  shortDesc: 'An Excel-based data analysis project to uncover root causes of bus breakdowns and delays in New York City.',
+  longDesc: 'Hired by the New York Division of Transportation, this project investigates patterns behind frequent delays and mechanical issues in the city’s bus fleet. Using Excel tools like Power Query, PivotTables, and analytical functions, it answers key questions about delay reasons, geographical and company-based variations, and weekday trends.',
+  highlights: [
+    'Root-cause analysis of delays using PivotTables',
+    'Power Query for transforming and filtering raw operational data',
+    'Comparative delay breakdown by company and borough',
+    'Weekday correlation analysis for delay frequency',
+    'Interactive visualizations using charts and slicers'
+  ],
+  link: 'https://1drv.ms/x/c/6926805ed8e3c229/EebeSDFzwFBOt-98dZEtuIMBeVVYUz-C4JTp21x_SPxFvQ?e=Q5iBhi',
+  image: 'https://cdn-icons-png.flaticon.com/512/732/732220.png',
+  alt: 'Excel NYC Bus Delay Analysis'
+},
  {
   id: generateId(),
   category: 'excel',
