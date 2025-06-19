@@ -1,6 +1,11 @@
+
+ function generateId(length = 8) {
+  return 'proj-' + Math.random().toString(36).substr(2, length);
+}
+
 const certificates = [
   {
-    id: 1,
+    id: generateId(),
     title: "Advanced MySQL for Data Analysis Certificate",
     description:
       "Learned to query databases efficiently, perform data extraction and manipulation, and apply SQL skills to real-world analytics projects.",
@@ -10,7 +15,7 @@ const certificates = [
       "https://www.analystbuilder.com/achievements/verify/LU1AUNABDR?r=ZkFvQXEy50af79AiWHM4fimdd",
   },
   {
-    id: 2,
+    id: generateId(),
     title: "MySQL for Data Analytics Certificates",
     description:
       "Learned to query databases efficiently, perform data extraction and manipulation, and apply SQL skills to real-world analytics projects.",
@@ -20,7 +25,7 @@ const certificates = [
       "https://www.analystbuilder.com/achievements/verify/1VD05N7AO5?r=OCqu1cZhfCUPYHKsQOqgQf9g6",
   },
   {
-    id: 3,
+    id: generateId(),
     title: "Tableau for Data Visualization",
     description:
       "Built visual dashboards and interactive charts to explore data insights using Tableau.",
@@ -31,7 +36,7 @@ const certificates = [
   },
 
    {
-    id: 4,
+    id: generateId(),
     title: "Data Analytics Bootcamp Certificate",
     description:
       "Completed an intensive Data Analyst Bootcamp covering data cleaning, analysis, visualization, and reporting with Python, SQL, and Power BI.",
@@ -41,7 +46,7 @@ const certificates = [
       "https://drive.google.com/file/d/12GSDhacTcBW1fiWf0Q3yp9gE1oT1Pk32/view?usp=sharing",
   },
 {
-  id: 5,
+  id: generateId(),
   title: "Microsoft Power BI Desktop for Business Intelligence Certificate",
   description:
     "Gained skills in creating interactive reports and dashboards, data modeling, and business intelligence using Microsoft Power BI Desktop.",
@@ -51,7 +56,7 @@ const certificates = [
     "https://www.analystbuilder.com/achievements/verify/JCYFXWKCRA?r=0WenXrjPfCiHD634Th0o1Fv0J",
 },
 {
-  id: 6,
+  id: generateId(),
   title: "Excel for Data Analytics Certificate",
   description:
     "Demonstrated proficiency in Excel for data analysis, including advanced functions, PivotTables, Power Query, and data visualization techniques for business decision making.",
@@ -59,6 +64,16 @@ const certificates = [
     "https://drive.google.com/thumbnail?id=1GplBBkI6vsYtV646JTeM3n9ZxnxWtw-Y",
   link:
     "https://www.analystbuilder.com/achievements/verify/5X9SCAPPWX?r=urhgWZRWU7VJf9H2PcRDJdn3B"
+},
+{
+  id: generateId(),
+  title: "Python Programming for Beginners Certificate",
+  description:
+    "Gained foundational knowledge in Python programming, including variables, control flow, functions, loops, and basic data structures. Built hands-on coding skills for problem-solving and scripting tasks.",
+  image:
+     "https://drive.google.com/thumbnail?id=1mfZwghyN9N2FYPZwKO8vgI-VsrzgIG9e",
+  link:
+     "https://www.analystbuilder.com/achievements/verify/Y00CZ2QPY5?r=YvDwPmoFzwFAbB8Z28HZRQx4K",
 }
 
 ];
