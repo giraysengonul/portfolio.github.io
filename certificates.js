@@ -74,8 +74,18 @@ const certificates = [
      "https://drive.google.com/thumbnail?id=1mfZwghyN9N2FYPZwKO8vgI-VsrzgIG9e",
   link:
      "https://www.analystbuilder.com/achievements/verify/Y00CZ2QPY5?r=YvDwPmoFzwFAbB8Z28HZRQx4K",
-}
+},
 
+{
+  id: generateId(),
+  title: "Pandas for Data Analysis Certificate",
+  description:
+    "Developed hands-on skills in data manipulation using Pandas, including filtering, grouping, aggregation, and time series operations. Gained experience in real-world data cleaning and exploratory analysis, supporting insights through practical scripting.",
+  image:
+    "https://drive.google.com/thumbnail?id=1Tj-Q1NbZAXTnK5nsCmfIXNhYx8OB3lYk",
+  link:
+    "https://www.analystbuilder.com/achievements/verify/8UP6W5PDTH?r=EnrPTR22NDwMODC2vZWzfgoKH"
+}
 ];
 
 
