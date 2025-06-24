@@ -17,7 +17,7 @@ const projects = [
     'Weekday correlation analysis for delay frequency',
     'Interactive visualizations using charts and slicers'
   ],
-  link: 'https://1drv.ms/x/c/6926805ed8e3c229/EebeSDFzwFBOt-98dZEtuIMBeVVYUz-C4JTp21x_SPxFvQ?e=Q5iBhi',
+  link: 'https://github.com/giraysengonul/Excel-Data-Analysis-Projects/tree/main/Bus_Breakdown_and_Delays_NYC%20Project',
   image: 'https://cdn-icons-png.flaticon.com/512/732/732220.png',
   alt: 'Excel NYC Bus Delay Analysis'
 },
@@ -34,7 +34,7 @@ const projects = [
     'Forecasting future debt growth',
     'Power Query for advanced data manipulation'
   ],
-  link: 'https://1drv.ms/x/c/6926805ed8e3c229/EXdRP7iH811Eo3bD4mtyBLYBhGwnBO3wDQ-H4UUd-247ZQ?e=AejkAc',
+  link: 'https://github.com/giraysengonul/Excel-Data-Analysis-Projects/tree/main/US%20Debt%20Tracker%20Project%20-%20Data%20Analysis',
   image: 'https://cdn-icons-png.flaticon.com/512/732/732220.png',
   alt: 'Excel Debt Analysis Project'
 },
