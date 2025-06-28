@@ -38,6 +38,27 @@ const projects = [
   image: 'https://cdn-icons-png.flaticon.com/512/732/732220.png',
   alt: 'Excel Debt Analysis Project'
 },
+
+{
+  id: generateId(),
+  category: 'excel',
+  title: 'LAPD Crime Statistics Dashboard',
+  shortDesc: 'An interactive Excel dashboard analyzing crime data reported by the LAPD from 2020 to present.',
+  longDesc: 'This project explores crime statistics reported by the Los Angeles Police Department from 2020 onwards. Using advanced Excel tools like Power Query, Pivot Tables, and dynamic charts, the dashboard enables users to filter and visualize data by year, gender, and crime type. The analysis reveals trends, totals, and demographic patterns in reported crimes, with a focus on clarity and interactivity.',
+  highlights: [
+    'Power Query for data cleaning and transformation',
+    'Pivot Tables and dynamic charting',
+    'Interactive filters by year and gender',
+    'Visual summary of crime categories and trends',
+    'Excel-based dashboard with professional layout'
+  ],
+  link: 'https://github.com/giraysengonul/Excel-Data-Analysis-Projects/tree/main/Lapd-Crime-Statistics-Dashboard',
+  image: 'https://cdn-icons-png.flaticon.com/512/732/732220.png',
+  alt: 'LAPD Crime Excel Dashboard'
+},
+
+
+
    /*PowerBI*/
   {
   id: generateId(),
