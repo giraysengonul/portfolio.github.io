@@ -107,7 +107,19 @@ const certificates = [
     "https://drive.google.com/thumbnail?id=1jevBbPsgv4pIFRXE0mSQd-g2obQkBnF-",
   link:
     "https://www.analystbuilder.com/achievements/verify/LIWF1SXY75?r=qzcvJCmTK7hKkFhmW5Ref1OKB"
+},
+
+{
+  id: generateId(),
+  title: "Advanced Excel for Automation Certificate",
+  description:
+    "Completed an advanced course focused on Excel automation techniques including VBA macros, Power Query, and pivot tables to streamline repetitive tasks and enhance data analysis efficiency.",
+  image:
+    "https://drive.google.com/thumbnail?id=1kuF2SDw6YtXmJgu-cXD0KweNck5LoZWD",
+  link:
+    "https://www.analystbuilder.com/achievements/verify/Q2NGK5X1ON?r=QKeCOaeJQPWQ4kDsoxqIDlHiV"
 }
+
 
 ];
 

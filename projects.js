@@ -57,6 +57,24 @@ const projects = [
   alt: 'LAPD Crime Excel Dashboard'
 },
 
+{
+  id: generateId(),
+  category: 'excel',
+  title: 'Monthly Vehicle Crash Report Automation',
+  shortDesc: 'An Excel VBA macro project automating monthly vehicle crash reports for efficient data analysis.',
+  longDesc: 'This project automates the monthly reporting process for vehicle crash data using Excel VBA macros. It provides insights on crash times over a 24-hour period, unique accident addresses, total injured and deceased counts, and ranks contributing factors from highest to lowest. The automation reduces manual work and ensures consistent, timely reports for the client.',
+  highlights: [
+    'Automated report generation via VBA macros',
+    'Analysis of crash times over 24 hours',
+    'Identification of unique accident locations',
+    'Summary of total injured and dead',
+    'Ranking of contributing factors from highest to lowest'
+  ],
+  link: 'https://github.com/giraysengonul/Excel-Data-Analysis-Projects/tree/main/Vehicle%20Crash%20Report%20Project',
+   image: 'https://cdn-icons-png.flaticon.com/512/732/732220.png',
+  alt: 'Vehicle Crash Report VBA Macro'
+},
+
 
 
    /*PowerBI*/
