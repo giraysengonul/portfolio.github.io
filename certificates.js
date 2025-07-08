@@ -127,7 +127,7 @@ const certificates = [
   description:
     "Completed a full-length training on designing cloud-native data pipelines using Azure and AWS. Worked hands-on with Data Factory, Synapse, Glue, Redshift, Quicksight, and more to develop scalable, automated data solutions.",
   image:
-    "https://drive.google.com/thumbnail?id= 1EED1YQpWVps3yMMj_pIxrj4beWLZto14",
+    "https://drive.google.com/thumbnail?id=1EED1YQpWVps3yMMj_pIxrj4beWLZto14",
   link:
     "https://www.analystbuilder.com/achievements/verify/5ZYVUF0778?r=UiGGZPVaL9myNN45JXHmlx5G1"
 },
