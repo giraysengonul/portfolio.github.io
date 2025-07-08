@@ -35,16 +35,17 @@ const certificates = [
       "https://www.analystbuilder.com/achievements/verify/59JUCU1W77?r=LrxKi2LG5D3Do9cNYLjl9va3x",
   },
 
-   {
-    id: generateId(),
-    title: "Data Analytics Bootcamp Certificate",
-    description:
-      "Completed an intensive Data Analyst Bootcamp covering data cleaning, analysis, visualization, and reporting with Python, SQL, and Power BI.",
-    image:
-      "https://drive.google.com/thumbnail?id=157MH3D9i7dKfkfbg5W1CWF5YkQd4oi2j",
-    link:
-      "https://drive.google.com/file/d/12GSDhacTcBW1fiWf0Q3yp9gE1oT1Pk32/view?usp=sharing",
-  },
+{
+  id: generateId(),
+  title: "Data Analyst Roadmap Certificate",
+  description:
+    "Completed an intensive program designed to take beginners to job-ready level in data analytics. Covered tools such as SQL, Excel, Tableau, Python, Pandas, and cloud services with hands-on practice and technical interview preparation.",
+  image:
+     "https://drive.google.com/thumbnail?id=1rsv0d4xm-5kAxnc27VgrlqLDuSAAV4kF",
+  link:
+    "https://www.analystbuilder.com/achievements/verify/JHZZDE670T?r=hynzZw2ozdUIq0Gn9xymWT1bW"
+},
+ 
 {
   id: generateId(),
   title: "Microsoft Power BI Desktop for Business Intelligence Certificate",
@@ -118,6 +119,28 @@ const certificates = [
     "https://drive.google.com/thumbnail?id=1kuF2SDw6YtXmJgu-cXD0KweNck5LoZWD",
   link:
     "https://www.analystbuilder.com/achievements/verify/Q2NGK5X1ON?r=QKeCOaeJQPWQ4kDsoxqIDlHiV"
+},
+
+{
+  id: generateId(),
+  title: "Cloud Data Engineering with Azure & AWS",
+  description:
+    "Completed a full-length training on designing cloud-native data pipelines using Azure and AWS. Worked hands-on with Data Factory, Synapse, Glue, Redshift, Quicksight, and more to develop scalable, automated data solutions.",
+  image:
+    "https://drive.google.com/thumbnail?id= 1EED1YQpWVps3yMMj_pIxrj4beWLZto14",
+  link:
+    "https://www.analystbuilder.com/achievements/verify/5ZYVUF0778?r=UiGGZPVaL9myNN45JXHmlx5G1"
+},
+
+{
+ id: generateId(),
+ title: "Data Analytics Bootcamp Certificate",
+ description:
+    "Completed an intensive Data Analyst Bootcamp covering data cleaning, analysis, visualization, and reporting with Python, SQL, and Power BI.",
+  image:
+    "https://drive.google.com/thumbnail?id=157MH3D9i7dKfkfbg5W1CWF5YkQd4oi2j",
+  link:
+    "https://drive.google.com/file/d/12GSDhacTcBW1fiWf0Q3yp9gE1oT1Pk32/view?usp=sharing",
 }
 
 
