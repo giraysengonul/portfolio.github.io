@@ -194,7 +194,7 @@ const projects = [
 
 {
   id: generateId(),
-  category: "python",
+  category: "pandas",
   title: "Bitcoin Price Analysis – Time Series Visualization",
   shortDesc: "Analyzes Bitcoin historical price data from 2013 to 2017 using Python, Pandas, and Plotly to identify trends and volatility.",
   longDesc: "This project explores historical Bitcoin OHLC price data using time series analysis and interactive visualizations. By leveraging Python, Pandas, and Plotly, it reveals long-term price trends, daily changes, and market behaviors. Key insights include annual and monthly performance, candlestick charts, log vs linear scale comparisons, and advanced visuals using Cufflinks. The analysis enhances understanding of cryptocurrency volatility and investor sentiment across time.",
