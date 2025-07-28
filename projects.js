@@ -264,6 +264,24 @@ const projects = [
   link: 'https://github.com/giraysengonul/SQL-Data-Analysis-Projects/tree/main/World-Life-Expectancy-Project',
   image: 'https://www.commvault.com/wp-content/uploads/2019/08/sql-server_logo.jpg',
   alt: 'World Life Expectancy Project'
+},
+
+{
+  id: 'covid19-sql-analysis',
+  category: 'sql',
+  title: 'COVID-19 Data Exploration & Analysis with SQL',
+  shortDesc: 'Explores and analyzes global COVID-19 data using structured SQL queries and aggregations.',
+  longDesc: 'This project provides a detailed SQL-based analysis of the COVID-19 pandemic using global datasets on cases, deaths, and vaccinations. It covers data exploration, percentage calculations, continent-level summaries, and vaccination trends using advanced SQL features. Key techniques include joins, window functions, CTEs, temporary tables, and view creation for scalable analysis and visualization.',
+  highlights: [
+   "Exploratory analysis on total cases, deaths, and infection rates",
+    "Calculated death and infection percentages relative to population",
+    "Ranked countries and continents by cases and deaths",
+    "Tracked vaccination progress using window functions",
+    "Created reusable views and temporary tables for further visualization"
+  ],
+  link: 'https://github.com/giraysengonul/SQL-Data-Analysis-Projects/tree/main/Covid-Portfolio-Project',
+  image: 'https://www.commvault.com/wp-content/uploads/2019/08/sql-server_logo.jpg',
+  alt: 'COVID-19 SQL Data Analysis Project'
 }
 
 
