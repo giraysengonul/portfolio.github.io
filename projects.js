@@ -119,8 +119,25 @@ const projects = [
   image: 'https://github.com/giraysengonul/PowerBI-Data-Analysis-Projects/blob/main/Data-Professional-Survey-Project/assets/image1.png?raw=true', 
   alt: 'Data Professional Survey Breakdown Dashboard'
 },
-
-
+{
+  id: generateId(),
+  category: 'powerbi',
+  title: 'Toy Store KPI Dashboard',
+  shortDesc: 'Power BI dashboard visualizing sales, inventory, and profitability KPIs of toy stores.',
+  longDesc: `This Power BI project presents a dynamic dashboard designed to analyze the key performance indicators of toy stores across multiple locations. It provides insights into product category profitability, seasonal sales trends, inventory value, and out-of-stock losses. The dashboard enables data-driven decisions by combining visual storytelling with interactive filtering options.`,
+  highlights: [
+    'Identified most and least profitable product categories',
+    'Compared profit trends across different store locations',
+    'Analyzed seasonal patterns in sales data over time',
+    'Detected potential lost sales due to out-of-stock products',
+    'Calculated total inventory value and estimated stock duration',
+    'Interactive filters for category, location, and time range'
+  ],
+  tools: ['Power BI Desktop', 'DAX', 'Power Query'],
+  link: 'https://github.com/giraysengonul/PowerBI-Data-Analysis-Projects/tree/main/Toy-Store-KPI-Project',
+  image: 'https://github.com/giraysengonul/PowerBI-Data-Analysis-Projects/blob/main/Toy-Store-KPI-Project/images/Page1.png?raw=true', 
+  alt: 'Toy Store KPI Dashboard'
+},
 
 
   /*tableau*/
