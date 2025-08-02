@@ -341,7 +341,26 @@ const projects = [
   link: 'https://github.com/giraysengonul/SQL-Data-Analysis-Projects/tree/main/Covid-Portfolio-Project',
   image: 'https://www.commvault.com/wp-content/uploads/2019/08/sql-server_logo.jpg',
   alt: 'COVID-19 SQL Data Analysis Project'
+},
+
+{
+  id: 'restaurant-order-sql-analysis',
+  category: 'sql',
+  title: 'Restaurant Order Analysis ',
+  shortDesc: 'Analyzes restaurant menu and order data using structured SQL queries to uncover business insights.',
+  longDesc: 'This project presents a SQL-based analysis of a restaurant\'s menu and customer order data. The goal was to explore menu structure, order patterns, customer behavior, and revenue distribution. The analysis was divided into three stages: menu exploration, order breakdown, and combined insights using JOIN operations. Key findings include the most and least ordered dishes, average prices per category, and the top-spending customer orders.',
+  highlights: [
+    "Explored menu items and categorized dish counts",
+    "Calculated average prices and identified most/least expensive items",
+    "Analyzed order frequency, volume, and time span",
+    "Identified top-spending orders and customer preferences",
+    "Joined tables to perform advanced category-wise breakdowns"
+  ],
+  link: 'https://github.com/giraysengonul/SQL-Data-Analysis-Projects/tree/main/Restaurant-Order-Analysis',
+  image: 'https://www.commvault.com/wp-content/uploads/2019/08/sql-server_logo.jpg',
+  alt: 'Restaurant Order Analysis'
 }
+
 
 
 ];
