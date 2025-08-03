@@ -53,7 +53,7 @@ const projects = [
     'Excel-based dashboard with professional layout'
   ],
   link: 'https://github.com/giraysengonul/Excel-Data-Analysis-Projects/tree/main/Lapd-Crime-Statistics-Dashboard',
-  image: 'https://cdn-icons-png.flaticon.com/512/732/732220.png',
+  image: 'https://github.com/giraysengonul/Excel-Data-Analysis-Projects/blob/main/Lapd-Crime-Statistics-Dashboard/assets/Lapd-Crime-Statistics-Dashboard-Screenshot.png?raw=true',
   alt: 'LAPD Crime Excel Dashboard'
 },
 
@@ -75,6 +75,23 @@ const projects = [
   alt: 'Vehicle Crash Report VBA Macro'
 },
 
+{
+  id: generateId(),
+  category: 'excel',
+  title: 'Coffee Shop Sales Project – Data Analysis',
+  shortDesc: 'An Excel-based sales analysis project revealing key business insights for a coffee shop.',
+  longDesc: 'This project focuses on analyzing a coffee shop’s sales data using Microsoft Excel. By leveraging pivot tables, charts, and formulas, it answers important business questions such as sales trends over time, busiest days of the week, and product performance. The project aims to support data-driven decisions for sales and inventory management using visual and structured reporting.',
+  highlights: [
+    'Analyzed sales trends across time periods',
+    'Identified busiest days of the week and possible reasons',
+    'Ranked products based on quantity sold and revenue generated',
+    'Used pivot tables and charts for interactive reporting',
+    'Cleaned and structured raw sales data for better insights'
+  ],
+  link: 'https://github.com/giraysengonul/Excel-Data-Analysis-Projects/tree/main/Coffee-Shop-Sales-Project-Data-Analysis',
+  image: 'https://github.com/giraysengonul/Excel-Data-Analysis-Projects/blob/main/Coffee-Shop-Sales-Project-Data-Analysis/assets/Page1.png?raw=true',
+  alt: 'Coffee Shop Sales Excel Dashboard'
+},
 
 
    /*PowerBI*/
