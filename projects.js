@@ -155,6 +155,26 @@ const projects = [
   image: 'https://github.com/giraysengonul/PowerBI-Data-Analysis-Projects/blob/main/Toy-Store-KPI-Project/images/Page1.png?raw=true', 
   alt: 'Toy Store KPI Dashboard'
 },
+{
+  id: generateId(),
+  category: 'powerbi',
+  title: 'Adidas Sales Analysis Dashboard',
+  shortDesc: 'Power BI dashboard analyzing Adidas sales, profitability, pricing, and product demand.',
+  longDesc: `This Power BI project provides an in-depth analysis of Adidas sales data across key performance metrics such as total sales, profit, sales volume, pricing, and margins. The dashboard enables stakeholders to monitor performance trends over time, evaluate profitability across dimensions, and assess pricing strategy effectiveness. It is designed to support data-driven business decisions through interactive and visually engaging insights.`,
+  highlights: [
+    'Visualized total sales performance over time',
+    'Analyzed total profit across regions and categories',
+    'Evaluated sales volume to identify high-demand products',
+    'Calculated average price per unit to assess pricing strategy',
+    'Measured average margin to understand profitability',
+    'Interactive dashboard with filters by product, region, and time'
+  ],
+  tools: ['Power BI Desktop', 'DAX', 'Power Query'],
+  link: 'https://github.com/giraysengonul/PowerBI-Data-Analysis-Projects/tree/main/Adidas-Sales-Analysis-Project',
+  image: 'https://github.com/giraysengonul/PowerBI-Data-Analysis-Projects/blob/main/Adidas-Sales-Analysis-Project/assets/Page1.png?raw=true',
+  alt: 'Adidas Sales Analysis Power BI Dashboard'
+},
+
 
 
   /*tableau*/
