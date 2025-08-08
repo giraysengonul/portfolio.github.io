@@ -175,6 +175,29 @@ const projects = [
   alt: 'Adidas Sales Analysis Power BI Dashboard'
 },
 
+{
+  "id": "generateId()",
+  "category": "powerbi",
+  "title": "Fruit Sales Data Analysis",
+  "shortDesc": "Power BI dashboard analyzing fruit sales and inventory performance across multiple customer and product dimensions.",
+  "longDesc": "This Power BI project delivers an interactive analysis of fruit sales and inventory data. It explores customer purchasing behavior, product performance, pricing, and demographic factors influencing sales. The dashboard helps stakeholders gain actionable insights by visualizing key metrics like total sales, discounts, unit prices, and product-wise sales volume. Designed with a focus on simplicity and depth, it supports data-driven decisions through dynamic filtering and clear visuals.",
+  "highlights": [
+    "Identified customers with the highest quantity purchases",
+    "Visualized quantity, total amount, and unit price by product name and category",
+    "Compared unit prices across different product categories",
+    "Analyzed sales amount by customer gender and birth year",
+    "Highlighted top 3 most sold and least sold products",
+    "Highlighted top 3 most expensive products based on unit price",
+    "KPI Cards: Total Sales, Total Discount Given, Total Quantity Sold"
+  ],
+  "tools": ["Power BI Desktop", "DAX", "Power Query"],
+  "link": "https://github.com/giraysengonul/PowerBI-Data-Analysis-Projects/tree/main/Fruit-Sales-Data-Analysis",
+  "image": "https://github.com/giraysengonul/PowerBI-Data-Analysis-Projects/blob/main/Fruit-Sales-Data-Analysis/assets/Page1.png?raw=true",
+  "alt": "Fruit Sales Data Analysis Power BI Dashboard"
+},
+
+
+
 
 
   /*tableau*/
