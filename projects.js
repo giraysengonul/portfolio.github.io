@@ -176,7 +176,7 @@ const projects = [
 },
 
 {
-  "id": "generateId()",
+  "id": generateId(),
   "category": "powerbi",
   "title": "Fruit Sales Data Analysis",
   "shortDesc": "Power BI dashboard analyzing fruit sales and inventory performance across multiple customer and product dimensions.",
@@ -420,7 +420,7 @@ const projects = [
 },
 
 {
-  id: 'covid19-sql-analysis',
+  id: generateId(),
   category: 'sql',
   title: 'COVID-19 Data Exploration & Analysis with SQL',
   shortDesc: 'Explores and analyzes global COVID-19 data using structured SQL queries and aggregations.',
@@ -438,7 +438,7 @@ const projects = [
 },
 
 {
-  id: 'restaurant-order-sql-analysis',
+  id: generateId(),
   category: 'sql',
   title: 'Restaurant Order Analysis ',
   shortDesc: 'Analyzes restaurant menu and order data using structured SQL queries to uncover business insights.',
@@ -453,7 +453,28 @@ const projects = [
   link: 'https://github.com/giraysengonul/SQL-Data-Analysis-Projects/tree/main/Restaurant-Order-Analysis',
   image: 'https://www.commvault.com/wp-content/uploads/2019/08/sql-server_logo.jpg',
   alt: 'Restaurant Order Analysis'
+},
+
+
+{
+  "id": generateId(),
+  "category": "sql",
+  "title": "Nashville Housing Data Cleaning & Analysis",
+  "shortDesc": "Cleansed and analyzed Nashville housing sales data using Microsoft SQL Server to prepare for insightful data analysis.",
+  "longDesc": "This project involved comprehensive data cleaning and preliminary analysis of Nashville housing sales data using Microsoft SQL Server. Key tasks included date format standardization, filling missing address data, splitting address fields, converting categorical values, removing duplicate records, and dropping unnecessary columns. The cleaned dataset enabled initial exploratory analysis on sales trends, vacant land sales, and price-location relationships, providing a solid foundation for further in-depth analysis.",
+  "highlights": [
+    "Standardized sale date format for consistency",
+    "Imputed missing property addresses using related records",
+    "Split address field into separate street and city columns",
+    "Normalized categorical data for vacant land sales",
+    "Removed duplicate entries to ensure data integrity",
+    "Performed initial data exploration on sales and pricing trends"
+  ],
+  "link": "https://github.com/giraysengonul/SQL-Data-Analysis-Projects/tree/main/Nashville-Housing-Data-Analysis-Project",
+  "image": "https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_server_logo.png",
+  "alt": "Nashville Housing Data SQL Project"
 }
+
 
 
 
