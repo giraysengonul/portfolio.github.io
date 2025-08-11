@@ -457,12 +457,12 @@ const projects = [
 
 
 {
-  "id": generateId(),
-  "category": "sql",
-  "title": "Nashville Housing Data Cleaning & Analysis",
-  "shortDesc": "Cleansed and analyzed Nashville housing sales data using Microsoft SQL Server to prepare for insightful data analysis.",
-  "longDesc": "This project involved comprehensive data cleaning and preliminary analysis of Nashville housing sales data using Microsoft SQL Server. Key tasks included date format standardization, filling missing address data, splitting address fields, converting categorical values, removing duplicate records, and dropping unnecessary columns. The cleaned dataset enabled initial exploratory analysis on sales trends, vacant land sales, and price-location relationships, providing a solid foundation for further in-depth analysis.",
-  "highlights": [
+  id: generateId(),
+  category: "sql",
+  title: "Nashville Housing Data Cleaning & Analysis",
+  shortDesc: "Cleansed and analyzed Nashville housing sales data using Microsoft SQL Server to prepare for insightful data analysis.",
+  longDesc: "This project involved comprehensive data cleaning and preliminary analysis of Nashville housing sales data using Microsoft SQL Server. Key tasks included date format standardization, filling missing address data, splitting address fields, converting categorical values, removing duplicate records, and dropping unnecessary columns. The cleaned dataset enabled initial exploratory analysis on sales trends, vacant land sales, and price-location relationships, providing a solid foundation for further in-depth analysis.",
+  highlights: [
     "Standardized sale date format for consistency",
     "Imputed missing property addresses using related records",
     "Split address field into separate street and city columns",
@@ -470,9 +470,9 @@ const projects = [
     "Removed duplicate entries to ensure data integrity",
     "Performed initial data exploration on sales and pricing trends"
   ],
-  "link": "https://github.com/giraysengonul/SQL-Data-Analysis-Projects/tree/main/Nashville-Housing-Data-Analysis-Project",
-  "image": "https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_server_logo.png",
-  "alt": "Nashville Housing Data SQL Project"
+  link: "https://github.com/giraysengonul/SQL-Data-Analysis-Projects/tree/main/Nashville-Housing-Data-Analysis-Project",
+  image: 'https://www.commvault.com/wp-content/uploads/2019/08/sql-server_logo.jpg',
+  alt: "Nashville Housing Data SQL Project"
 }
 
 
