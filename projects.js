@@ -92,6 +92,23 @@ const projects = [
   image: 'https://github.com/giraysengonul/Excel-Data-Analysis-Projects/blob/main/Coffee-Shop-Sales-Project-Data-Analysis/assets/Page1.png?raw=true',
   alt: 'Coffee Shop Sales Excel Dashboard'
 },
+{
+  id: generateId(),
+  category: 'excel',
+  title: 'Hollywood Data Analysis Project',
+  shortDesc: 'An Excel-based data analysis project exploring profitability and trends in the Hollywood film industry.',
+  longDesc: 'This project focuses on analyzing Hollywood movie data using Microsoft Excel. By leveraging pivot tables, charts, and dashboards, it uncovers insights into profitability, film production trends, and audience/critic ratings. The analysis aims to reveal how different factors such as studio, genre, and release year influence financial and audience outcomes, providing a structured and visual approach to understanding the film industry.',
+  highlights: [
+    'Analyzed profitability by lead studio and genre',
+    'Explored film production trends across studios, genres, and years',
+    'Compared Rotten Tomatoes critic vs. audience ratings with worldwide gross',
+    'Built interactive dashboards with pivot tables and charts',
+    'Structured raw data for clear and actionable insights'
+  ],
+  link: 'https://github.com/giraysengonul/Excel-Data-Analysis-Projects/tree/main/Hollywood-Data-Analysis-Project',
+  image: 'https://github.com/giraysengonul/Excel-Data-Analysis-Projects/blob/main/Hollywood-Data-Analysis-Project/assets/Page1.png?raw=true',
+  alt: 'Hollywood Data Analysis Excel Dashboard'
+},
 
 
    /*PowerBI*/
@@ -176,12 +193,12 @@ const projects = [
 },
 
 {
-  "id": generateId(),
-  "category": "powerbi",
-  "title": "Fruit Sales Data Analysis",
-  "shortDesc": "Power BI dashboard analyzing fruit sales and inventory performance across multiple customer and product dimensions.",
-  "longDesc": "This Power BI project delivers an interactive analysis of fruit sales and inventory data. It explores customer purchasing behavior, product performance, pricing, and demographic factors influencing sales. The dashboard helps stakeholders gain actionable insights by visualizing key metrics like total sales, discounts, unit prices, and product-wise sales volume. Designed with a focus on simplicity and depth, it supports data-driven decisions through dynamic filtering and clear visuals.",
-  "highlights": [
+  id: generateId(),
+  category: "powerbi",
+  title: "Fruit Sales Data Analysis",
+  shortDesc: "Power BI dashboard analyzing fruit sales and inventory performance across multiple customer and product dimensions.",
+  longDesc: "This Power BI project delivers an interactive analysis of fruit sales and inventory data. It explores customer purchasing behavior, product performance, pricing, and demographic factors influencing sales. The dashboard helps stakeholders gain actionable insights by visualizing key metrics like total sales, discounts, unit prices, and product-wise sales volume. Designed with a focus on simplicity and depth, it supports data-driven decisions through dynamic filtering and clear visuals.",
+  highlights: [
     "Identified customers with the highest quantity purchases",
     "Visualized quantity, total amount, and unit price by product name and category",
     "Compared unit prices across different product categories",
@@ -190,10 +207,10 @@ const projects = [
     "Highlighted top 3 most expensive products based on unit price",
     "KPI Cards: Total Sales, Total Discount Given, Total Quantity Sold"
   ],
-  "tools": ["Power BI Desktop", "DAX", "Power Query"],
-  "link": "https://github.com/giraysengonul/PowerBI-Data-Analysis-Projects/tree/main/Fruit-Sales-Data-Analysis",
-  "image": "https://github.com/giraysengonul/PowerBI-Data-Analysis-Projects/blob/main/Fruit-Sales-Data-Analysis/assets/Page1.png?raw=true",
-  "alt": "Fruit Sales Data Analysis Power BI Dashboard"
+  tools: ["Power BI Desktop", "DAX", "Power Query"],
+  link: "https://github.com/giraysengonul/PowerBI-Data-Analysis-Projects/tree/main/Fruit-Sales-Data-Analysis",
+  image: "https://github.com/giraysengonul/PowerBI-Data-Analysis-Projects/blob/main/Fruit-Sales-Data-Analysis/assets/Page1.png?raw=true",
+  alt: "Fruit Sales Data Analysis Power BI Dashboard"
 },
 
 
@@ -424,20 +441,20 @@ const projects = [
   alt: 'Python Crypto Price Scraper Project'
 },
 {
-  "id": generateId(),
-  "category": "python",
-  "title": "Most Used Word Finder",
-  "shortDesc": "A Python script that analyzes a given text file to find and rank the most frequently used words.",
-  "longDesc": "This project leverages Python and its built-in libraries to perform frequency analysis on any text file. The script reads the content, cleans and tokenizes the text, removes common stopwords, and outputs a ranked list of the most-used words. It is modular and easily adaptable for larger-scale NLP tasks in the future.",
-  "highlights": [
+  id: generateId(),
+  category: "python",
+  title: "Most Used Word Finder",
+  shortDesc: "A Python script that analyzes a given text file to find and rank the most frequently used words.",
+  longDesc: "This project leverages Python and its built-in libraries to perform frequency analysis on any text file. The script reads the content, cleans and tokenizes the text, removes common stopwords, and outputs a ranked list of the most-used words. It is modular and easily adaptable for larger-scale NLP tasks in the future.",
+  highlights: [
     "Text parsing and word frequency analysis",
     "Stopword removal and case normalization",
     "Customizable text preprocessing steps",
     "Terminal output and optional CSV export"
   ],
-  "link": "https://github.com/giraysengonul/Python-Projects/tree/main/Most-Used-Word-Finding-Project",
-  "image": "https://cdn-icons-png.flaticon.com/512/5968/5968350.png",
-  "alt": "Python Most Used Word Finder Project"
+  link: "https://github.com/giraysengonul/Python-Projects/tree/main/Most-Used-Word-Finding-Project",
+  image: "https://cdn-icons-png.flaticon.com/512/5968/5968350.png",
+  alt: "Python Most Used Word Finder Project"
 },
 
 /*SQL*/
