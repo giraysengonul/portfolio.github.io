@@ -213,6 +213,26 @@ const projects = [
   alt: "Fruit Sales Data Analysis Power BI Dashboard"
 },
 
+{
+  id: generateId(),
+  category: "powerbi",
+  title: "ESG Risk Analysis (S&P 500 Companies)",
+  shortDesc: "Power BI dashboard analyzing Environmental, Social, and Governance (ESG) risks across S&P 500 companies with sector, industry, and controversy insights.",
+  longDesc: "This Power BI project provides a detailed analysis of ESG (Environmental, Social, and Governance) risks for S&P 500 companies. The dashboard allows users to explore sector and industry-level risk exposure, company-specific ESG risk scores, and controversy levels. It categorizes risks into different severity levels, helping stakeholders better understand sustainability performance, compliance challenges, and potential investment risks. The visualizations are designed to simplify complex ESG data and support informed decision-making.",
+  highlights: [
+    "Analyzed ESG risk scores across sectors and industries",
+    "Visualized Environmental, Social, and Governance breakdowns for each company",
+    "Highlighted controversy levels to assess company reputation risk",
+    "Categorized companies based on ESG risk levels (Negligible → Severe)",
+    "Displayed ESG risk distribution across S&P 500 companies",
+    "Provided interactive filtering for sector, industry, and company-level insights"
+  ],
+  tools: ["Power BI Desktop", "DAX", "Power Query"],
+  link: "https://github.com/giraysengonul/PowerBI-Data-Analysis-Projects/tree/main/ESG-Risk-Analysis-Project",
+  image: "https://github.com/giraysengonul/PowerBI-Data-Analysis-Projects/blob/main/ESG-Risk-Analysis-Project/assets/Page1.png?raw=true",
+  alt: "ESG Risk Analysis Power BI Dashboard"
+},
+
 
 
 
