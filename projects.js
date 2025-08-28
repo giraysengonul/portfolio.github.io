@@ -110,6 +110,27 @@ const projects = [
   alt: 'Hollywood Data Analysis Excel Dashboard'
 },
 
+{
+  id: generateId(),
+  category: 'excel',
+  title: 'Sales and Profit - Data Analysis Project',
+  shortDesc: 'An Excel-based dashboard analyzing sales and profit performance with interactive slicers.',
+  longDesc: 'This project focuses on analyzing sales and profit data using Microsoft Excel. By building pivot tables, charts, and an interactive dashboard, it provides insights into overall sales performance, profitability, customer distribution, and regional trends. The dashboard also includes dynamic slicers for category, year, and month to allow flexible and detailed exploration of the dataset.',
+  highlights: [
+    'Calculated Total Sales and Total Profit',
+    'Analyzed profit trends by year',
+    'Explored sales by sub-category and category',
+    'Measured customer count by year',
+    'Visualized sales by state',
+    'Identified top 5 customers by profit',
+    'Created interactive slicers for category, year, and month'
+  ],
+  link: 'https://github.com/giraysengonul/Excel-Data-Analysis-Projects/tree/main/Sales%20and%20Profit%20-%20Data%20Analysis',
+  image: 'https://github.com/giraysengonul/Excel-Data-Analysis-Projects/blob/main/Sales%20and%20Profit%20-%20Data%20Analysis/assets/Page0.png?raw=true',
+  alt: 'Sales and Profit Excel Dashboard'
+},
+
+
 
    /*PowerBI*/
   {
