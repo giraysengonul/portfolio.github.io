@@ -123,6 +123,17 @@ const certificates = [
 
 {
   id: generateId(),
+  title: "Git and GitHub for Data Professionals Certificate",
+  description:
+    "Successfully completed a professional course covering version control fundamentals, Git commands, GitHub workflows, and collaboration techniques using pull requests, branching, and merge conflict resolution. Gained hands-on experience with VSCode integration to manage and streamline data projects.",
+  image:
+    "https://drive.google.com/thumbnail?id=10FRaPNCnX9pOJx5EYTS6PSqdziRASex-",
+  link:
+    "https://www.analystbuilder.com/achievements/verify/GEBUS742DS?r=ntnAWYjULQQXiGXtTJMCo2jY6"
+},
+
+{
+  id: generateId(),
   title: "Cloud Data Engineering with Azure & AWS",
   description:
     "Completed a full-length training on designing cloud-native data pipelines using Azure and AWS. Worked hands-on with Data Factory, Synapse, Glue, Redshift, Quicksight, and more to develop scalable, automated data solutions.",
