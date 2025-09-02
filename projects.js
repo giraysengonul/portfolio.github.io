@@ -254,6 +254,27 @@ const projects = [
   alt: "ESG Risk Analysis Power BI Dashboard"
 },
 
+{
+  id: generateId(),
+  category: "powerbi",
+  title: "Amazon Prime Movies and TV Shows – Data Analysis",
+  shortDesc: "Power BI dashboard analyzing Amazon Prime’s Movies and TV Shows dataset with insights on titles, ratings, genres, and release trends.",
+  longDesc: "This Power BI project analyzes Amazon Prime’s Movies and TV Shows dataset. The dashboard provides insights into total titles by country, movies vs. TV shows distribution, release year trends, ratings, genres, and directors. It includes summary metrics such as total shows, total ratings, and key contributors. The dashboard is designed to help users explore Amazon Prime content from multiple perspectives and understand viewing trends across regions and genres.",
+  highlights: [
+    "Visualized total shows by country",
+    "Analyzed Movies vs. TV Shows distribution",
+    "Displayed release year trends for Amazon Prime titles",
+    "Explored ratings and genres by total shows",
+    "Summarized total titles, ratings, and directors",
+    "Provided interactive filtering for deeper content insights"
+  ],
+  tools: ["Power BI Desktop", "DAX", "Power Query"],
+  link: "https://github.com/giraysengonul/PowerBI-Data-Analysis-Projects/tree/main/Amazon-Prime-Movies-TV-Shows",
+  image: "https://github.com/giraysengonul/PowerBI-Data-Analysis-Projects/blob/main/Amazon-Prime-Movies-TV-Shows/assets/Page1.png?raw=true",
+  alt: "Amazon Prime Movies and TV Shows Power BI Dashboard"
+},
+
+
 
 
 
