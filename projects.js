@@ -269,8 +269,8 @@ const projects = [
     "Provided interactive filtering for deeper content insights"
   ],
   tools: ["Power BI Desktop", "DAX", "Power Query"],
-  link: "https://github.com/giraysengonul/PowerBI-Data-Analysis-Projects/tree/main/Amazon-Prime-Movies-TV-Shows",
-  image: "https://github.com/giraysengonul/PowerBI-Data-Analysis-Projects/blob/main/Amazon-Prime-Movies-TV-Shows/assets/Page1.png?raw=true",
+  link: "https://github.com/giraysengonul/PowerBI-Data-Analysis-Projects/tree/main/Amazon-Prime-Analysis-Project",
+  image: "https://github.com/giraysengonul/PowerBI-Data-Analysis-Projects/blob/main/Amazon-Prime-Analysis-Project/assets/Page1.png?raw=true",
   alt: "Amazon Prime Movies and TV Shows Power BI Dashboard"
 },
 
