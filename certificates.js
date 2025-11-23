@@ -34,6 +34,51 @@ const certificates = [
     link:
       "https://www.analystbuilder.com/achievements/verify/59JUCU1W77?r=LrxKi2LG5D3Do9cNYLjl9va3x",
   },
+  {
+  id: generateId(),
+  title: "Introduction to Data Analytics Certificate",
+  description:
+    "Completed IBM’s Introduction to Data Analytics course, gaining foundational knowledge in data analytics, key analytical processes, data roles, data structures, and end-to-end data analysis workflows including collection, wrangling, mining, and visualization.",
+  image:
+    "https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~QU6KSEAX5KBS/CERTIFICATE_LANDING_PAGE~QU6KSEAX5KBS.jpeg",
+  link:
+    "https://coursera.org/share/2ef4effae09df24b23bcfe41769ee7fa",
+},
+
+{
+  id: generateId(),
+  title: "Python for Data Science, AI & Development Certificate",
+  description:
+    "Completed IBM’s Python for Data Science, AI & Development course, gaining solid foundations in Python syntax, data types, expressions, data structures, functions, OOP, and error handling. Developed hands-on skills using Pandas, NumPy, and Jupyter Notebooks, and learned to work with REST APIs, handle web data, and perform web scraping with BeautifulSoup.",
+  image:
+    "https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~XJ46CGPFV18I/CERTIFICATE_LANDING_PAGE~XJ46CGPFV18I.jpeg",
+  link:
+    "https://coursera.org/share/d81d3cd372b014554ce2e1bbf3b23214",
+},
+
+{
+  id: generateId(),
+  title: "Databases and SQL for Data Science with Python Certificate",
+  description:
+    "Completed IBM’s Databases and SQL for Data Science with Python course, learning to analyze data using SQL and Python, create relational databases, and work with multiple tables through DDL and DML operations. Built proficiency in writing basic to intermediate SQL queries and applying advanced techniques such as joins, views, transactions, and stored procedures.",
+  image:
+    "https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~FD6LPXHJEC06/CERTIFICATE_LANDING_PAGE~FD6LPXHJEC06.jpeg",
+  link:
+    "https://coursera.org/share/6ba5107cadea3a015be412a33a505911",
+},
+
+{
+  id: generateId(),
+  title: "Get Started with Python Certificate",
+  description:
+    "Completed Google’s Get Started with Python course, learning how Python is used by data professionals and gaining foundational skills in Python syntax, semantics, loops, control flow, string manipulation, and core data structures for organizing and managing data.",
+  image:
+    "https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~W0MFNF57QLVC/CERTIFICATE_LANDING_PAGE~W0MFNF57QLVC.jpeg",
+  link:
+    "https://coursera.org/share/1d42cdd248186e4fe764a4dad7693cab",
+},
+
+
 
 {
   id: generateId(),
