@@ -273,6 +273,29 @@ const projects = [
   image: "https://github.com/giraysengonul/PowerBI-Data-Analysis-Projects/blob/main/Amazon-Prime-Analysis-Project/assets/Page1.png?raw=true",
   alt: "Amazon Prime Movies and TV Shows Power BI Dashboard"
 },
+{
+  id: generateId(),
+  category: "powerbi",
+  title: "YouTube Video Performance – Power BI Dashboard",
+  shortDesc:
+    "A Power BI dashboard analyzing YouTube video performance with custom KPIs, engagement metrics, upload trends, and content insights.",
+  longDesc:
+    "This Power BI project analyzes YouTube video performance using a dataset containing views, likes, comments, duration, captions, definitions, and upload dates. The dashboard includes custom KPIs such as Views Per Day, Average Engagement %, Like/Comment Ratio, and a unique Viral Score metric. Visuals include donut charts, scatter plots, area charts, and channel-level comparisons. Designed with a clean black & white theme, this dashboard provides deep insights into upload behavior, audience engagement, content quality, and performance trends across channels.",
+  highlights: [
+    "Connected and cleaned YouTube dataset using Power Query",
+    "Created custom KPIs: Views Per Day, Average Engagement %, Viral Score, Like/Comment Ratio",
+    "Designed donut charts for video definition (HD/SD) and caption usage",
+    "Built area chart showing uploads over time",
+    "Created channel comparison visuals using Views Per Day metric",
+    "Added scatter plot to analyze Duration vs Engagement %",
+    "Used minimalistic black & white dashboard design with custom icons and fonts"
+  ],
+  tools: ["Power BI Desktop", "Power Query", "DAX"],
+  link: "https://github.com/giraysengonul/PowerBI-Data-Analysis-Projects/tree/main/Youtube-Data-Analysis-Project",
+  image:
+    "https://github.com/giraysengonul/PowerBI-Data-Analysis-Projects/raw/main/Youtube-Data-Analysis-Project/assets/youtube_dashboard.png",
+  alt: "YouTube Data Analysis Power BI Dashboard"
+},
 
 
 
