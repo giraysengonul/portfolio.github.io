@@ -148,7 +148,7 @@ const projects = [
   ],
   tools: ["Microsoft Excel", "Pivot Tables", "Pivot Charts", "Slicers", "Excel Formulas"],
   link: "https://github.com/giraysengonul/Excel-Data-Analysis-Projects/tree/main/Purchase%26Shipping-Analysis-Project",
-  image: "https://github.com/giraysengonul/Excel-Data-Analysis-Projects/raw/main/Purchase%26Shipping-Analysis-Project/assets/Page1.png",
+  image: "https://github.com/giraysengonul/Excel-Data-Analysis-Projects/raw/main/Purchase%26Shipping-Analysis-Project/assets/Page0.png",
   alt: "Purchase and Shipping Excel Dashboard"
 },
 
