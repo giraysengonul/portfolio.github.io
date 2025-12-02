@@ -129,6 +129,28 @@ const projects = [
   image: 'https://github.com/giraysengonul/Excel-Data-Analysis-Projects/blob/main/Sales%20and%20Profit%20-%20Data%20Analysis/assets/Page0.png?raw=true',
   alt: 'Sales and Profit Excel Dashboard'
 },
+{
+  id: generateId(),
+  category: "excel",
+  title: "Purchase & Shipping – Data Analysis Project",
+  shortDesc: "An Excel dashboard analyzing purchase behavior, product performance, seasonality, and shipping insights with interactive slicers.",
+  longDesc: "This Excel-based data analysis project explores purchasing and shipping patterns across multiple product categories. The dashboard visualizes key metrics such as purchase trends by month and season, size distribution, color-based quantity, category performance, payment method usage, and customer buying behavior. It includes yearly and monthly slicers for fully interactive exploration, enabling users to analyze seasonal trends, product performance, and total purchase activity in depth.",
+  highlights: [
+    "Analyzed purchase trends by product and month",
+    "Calculated Year-on-Year Variance %",
+    "Measured Diversity % across product categories",
+    "Built frequency count for customer purchase behavior",
+    "Visualized quantity purchased by season",
+    "Displayed purchase % by size and quantity by color",
+    "Summarized category performance: Accessories, Footwear, Outerwear, Total Items",
+    "Created payment method percentage breakdown",
+    "Integrated yearly and monthly slicers for interactive analysis"
+  ],
+  tools: ["Microsoft Excel", "Pivot Tables", "Pivot Charts", "Slicers", "Excel Formulas"],
+  link: "https://github.com/giraysengonul/Excel-Data-Analysis-Projects/tree/main/Purchase%26Shipping-Analysis-Project",
+  image: "https://github.com/giraysengonul/Excel-Data-Analysis-Projects/raw/main/Purchase%26Shipping-Analysis-Project/assets/Page1.png",
+  alt: "Purchase and Shipping Excel Dashboard"
+},
 
 
 
