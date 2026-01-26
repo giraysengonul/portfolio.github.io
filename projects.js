@@ -319,6 +319,24 @@ const projects = [
   alt: "YouTube Data Analysis Power BI Dashboard"
 },
 
+{
+  id: generateId(),
+  category: "powerbi",
+  title: "E-Commerce Sales Dashboard",
+  shortDesc: "Power BI dashboard analyzing product performance, regional sales, and monthly sales & profit trends.",
+  longDesc: "This project presents an interactive E-Commerce Sales Dashboard built using Power BI. The dashboard focuses on analyzing sales performance across products, regions, and time. It highlights top 5 best-selling and worst-selling products, total sales by region, and monthly sales and profit trends. The goal of this project is to support data-driven decision-making by providing clear insights into product performance, regional demand, and profitability dynamics.",
+  highlights: [
+    "Identified top 5 best-selling and worst-selling products",
+    "Analyzed total sales distribution by region",
+    "Visualized monthly sales trends and seasonality",
+    "Compared total sales and profit on a monthly basis",
+    "Built interactive visuals for performance monitoring"
+  ],
+  tools: ["Power BI Desktop", "DAX", "Data Modeling"],
+  link: "https://github.com/giraysengonul/PowerBI-Data-Analysis-Projects/tree/main/Ecommerce-Sales-Projects",
+  image: "https://github.com/giraysengonul/PowerBI-Data-Analysis-Projects/raw/main/Ecommerce-Sales-Projects/assets/Page0.png",
+  alt: "E-Commerce Sales Power BI Dashboard"
+},
 
 
 

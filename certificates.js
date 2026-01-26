@@ -78,6 +78,17 @@ const certificates = [
     "https://coursera.org/share/1d42cdd248186e4fe764a4dad7693cab",
 },
 
+{
+  id: generateId(),
+  title: "SQL for Data Science Certificate",
+  description:
+    "Completed the SQL for Data Science course offered by the University of California, Davis. This certification covers core SQL skills required for data analysis, including writing queries to filter, sort, and summarize data, combining results using UNION, and manipulating strings, dates, and numeric values. The course emphasizes practical SQL usage for preparing and integrating data from multiple sources for analytical purposes.",
+  image:
+    "https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~PF2YFWL5NH8Q/CERTIFICATE_LANDING_PAGE~PF2YFWL5NH8Q.jpeg",
+  link:
+    "https://coursera.org/share/0212642f16799665520d3168643c4da3"
+},
+
 
 
 {
