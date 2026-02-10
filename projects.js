@@ -735,9 +735,26 @@ const projects = [
   link: "https://github.com/giraysengonul/SQL-Data-Analysis-Projects/tree/main/Nashville-Housing-Data-Analysis-Project",
   image: 'https://www.commvault.com/wp-content/uploads/2019/08/sql-server_logo.jpg',
   alt: "Nashville Housing Data SQL Project"
+},
+
+{
+  id: generateId(),
+  category: "sql",
+  title: "Walmart Sales Data Analysis Project",
+  shortDesc: "SQL-based data analysis project exploring Walmart sales performance, customer behavior, and product trends.",
+  longDesc: "This project focuses on analyzing Walmart sales data using SQL to extract meaningful business insights. The analysis covers revenue trends, product performance, customer segmentation, payment behavior, VAT distribution, and time-based sales patterns. By answering real-world business questions with SQL queries, the project demonstrates strong analytical thinking and practical use of SQL for data-driven decision-making.",
+  highlights: [
+    "Analyzed revenue and COGS trends by month",
+    "Identified top-performing cities, branches, and product lines",
+    "Explored customer behavior by gender and customer type",
+    "Analyzed VAT distribution across products and locations",
+    "Examined sales and rating patterns by time of day and weekday",
+    "Answered business questions using optimized SQL queries"
+  ],
+  link: "https://github.com/giraysengonul/SQL-Data-Analysis-Projects/tree/main/Walmart-Sales-Data-Analysis-Project",
+  image: 'https://www.commvault.com/wp-content/uploads/2019/08/sql-server_logo.jpg',
+  alt: "Walmart Sales Data Analysis SQL Project"
 }
-
-
 
 
 ];
