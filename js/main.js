@@ -279,12 +279,51 @@ function initSmoothScroll() {
 }
 
 /* =============================================
+   UPDATE PROJECT COUNTS FROM projects.js
+   ============================================= */
+
+function updateProjectCounts() {
+  if (typeof projects === 'undefined') return;
+
+  const categoryMap = {
+    'Tableau': 'tableau',
+    'Power BI': 'powerbi',
+    'Pandas': 'pandas',
+    'SQL': 'sql',
+    'Excel': 'excel',
+    'Python': 'python'
+  };
+
+  document.querySelectorAll('.project-category-card').forEach(card => {
+    const h3 = card.querySelector('h3');
+    if (!h3) return;
+
+    const categoryName = h3.textContent.trim();
+    const categoryKey = categoryMap[categoryName];
+    if (!categoryKey) return;
+
+    const p = card.querySelector('p');
+    if (!p) return;
+
+    // Skip cards that don't show project counts (iOS Apps, iOS Training)
+    if (!p.textContent.includes('Projects')) return;
+
+    // Count projects in this category
+    const count = projects.filter(proj => proj.category === categoryKey).length;
+
+    // Update the count text
+    p.textContent = `${count} ${count === 1 ? 'Project' : 'Projects'}`;
+  });
+}
+
+/* =============================================
    INIT ALL
    ============================================= */
 
 document.addEventListener('DOMContentLoaded', () => {
   initLoader();
   renderCertificates();
+  updateProjectCounts();
   initNavbar();
   initMobileMenu();
   initBackToTop();

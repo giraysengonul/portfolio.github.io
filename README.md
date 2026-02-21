@@ -176,6 +176,13 @@ In `index.html`, add a new `.skill-item` block inside the relevant `.skills-colu
 
 ## Changelog
 
+### February 2026 — v1.4
+- **Dynamic project counts:** Project category card counts are now automatically calculated from the `projects` array in `projects.js`. Adding or removing projects from any category instantly updates the displayed count on the homepage without manual editing.
+- **Implementation:**
+  - `projects.js` now included in `index.html` (safe to load — only provides data, no side effects)
+  - New `updateProjectCounts()` function in `js/main.js` counts projects per category and updates card text on page load
+  - Function called in `DOMContentLoaded` event
+
 ### February 2026 — v1.3
 - **Full mobile responsiveness overhaul** (`css/responsive.css` rewritten):
   - **Bug fix — hero padding on mobile:** `padding: 0 1.25rem` at the 480px breakpoint was overriding `padding-top: calc(nav-height + 2rem)` set by the 1024px rule, causing hero content to slide under the fixed navbar on phones. Fixed by using `padding-left` / `padding-right` only.
