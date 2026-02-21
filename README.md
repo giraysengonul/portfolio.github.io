@@ -176,6 +176,18 @@ In `index.html`, add a new `.skill-item` block inside the relevant `.skills-colu
 
 ## Changelog
 
+### February 2026 — v1.3
+- **Full mobile responsiveness overhaul** (`css/responsive.css` rewritten):
+  - **Bug fix — hero padding on mobile:** `padding: 0 1.25rem` at the 480px breakpoint was overriding `padding-top: calc(nav-height + 2rem)` set by the 1024px rule, causing hero content to slide under the fixed navbar on phones. Fixed by using `padding-left` / `padding-right` only.
+  - **Bug fix — rings misaligned on tablet/mobile:** `top: calc(50% + var(--nav-height)/2)` (added for desktop) caused rings to float above the image in column layout. Reset with `.hero-image-ring { top: 50% }` inside the 1024px breakpoint where `padding-top: 0` is applied to the wrapper.
+  - **Stat dividers hidden on mobile (≤768px):** Saves horizontal space; stats use `gap: 1.5rem` instead.
+  - **Contact grid fix (≤768px):** `max-width` raised to `480px`, `margin: 0 auto` ensured for centering.
+  - **Project cards tighter on mobile (≤480px):** `padding: 1rem`, `gap: 0.75rem`, icon `42px` to fit 2-column layout on small screens.
+  - **Hero CTA buttons full-width on mobile (≤480px):** `flex-direction: column; align-items: stretch`.
+  - **Section padding reduced to `4rem 0` on mobile (≤480px).**
+  - **About/contact cards padding reduced on mobile (≤480px).**
+  - **New 360px breakpoint** for small Android phones: smaller image (190px), smaller rings, stats stacked vertically, single-column project grid.
+
 ### February 2026 — v1.2
 - **Hero image rings fully visible:** The decorative rings around the profile photo were being clipped on the right side by the hero section's `overflow: hidden`. Fixed by adding `margin-right: 5rem` to `.hero-image-wrapper`, giving ring-3 (the outermost, 480px) 10px of clearance from the section edge.
 - **`iOS Developer` badge fully visible:** `badge-ios` moved from `right: -60px` to `right: -10px` so it no longer extends past the section's clipping boundary.
