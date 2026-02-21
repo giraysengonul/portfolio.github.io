@@ -195,16 +195,14 @@
 .hero-section {
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  justify-content: space-between;
   position: relative;
   overflow: hidden;
-  padding: calc(var(--nav-height) + 2rem) 2rem 4rem;
+  padding: 0 2rem;
   max-width: var(--container-max);
   margin: 0 auto;
-  gap: 2.5rem;
+  gap: 4rem;
 }
 
 .hero-bg {
@@ -259,9 +257,11 @@
 }
 
 .hero-content {
-  max-width: 700px;
+  flex: 1;
+  max-width: 580px;
   z-index: 10;
-  animation: fadeInUp 0.8s ease 0.4s both;
+  padding-top: var(--nav-height);
+  animation: fadeInUp 0.8s ease 0.3s both;
 }
 
 .hero-title {
@@ -280,7 +280,6 @@
   min-height: 2em;
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 0.25rem;
 }
 
@@ -297,23 +296,19 @@
   color: var(--text-muted);
   line-height: 1.75;
   margin-bottom: 2.5rem;
-  max-width: 520px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 480px;
 }
 
 .hero-cta {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-  justify-content: center;
   margin-bottom: 3rem;
 }
 
 .hero-stats {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 2rem;
 }
 
@@ -351,8 +346,12 @@
 /* Hero Image */
 .hero-image-wrapper {
   position: relative;
+  flex-shrink: 0;
   z-index: 10;
-  animation: fadeInUp 0.6s ease 0.2s both;
+  padding-top: var(--nav-height);
+  margin-top: -3rem;
+  margin-right: 5rem;
+  animation: fadeInUp 0.8s ease 0.5s both;
 }
 
 .hero-image {
@@ -379,7 +378,7 @@
   position: absolute;
   border-radius: 50%;
   z-index: 2;
-  top: 50%;
+  top: calc(50% + var(--nav-height) / 2);
   left: 50%;
   transform-origin: center;
 }
@@ -415,12 +414,12 @@
 
 .badge-ios {
   top: 25px;
-  right: -60px;
+  right: -10px;
 }
 
 .badge-ds {
-  bottom: 15px;
-  right: -70px;
+  top: 80px;
+  left: -70px;
 }
 
 /* Scroll Indicator */

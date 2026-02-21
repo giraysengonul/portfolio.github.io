@@ -176,14 +176,23 @@ In `index.html`, add a new `.skill-item` block inside the relevant `.skills-colu
 
 ## Changelog
 
-### February 2026 — v1.1
-- **Hero layout centered:** Profile photo is now centered horizontally on the page (full-width column layout instead of side-by-side). Text and all hero elements follow the same centered alignment.
-- **"Data Scientist" badge added:** A third floating badge now appears around the profile photo (bottom-right), alongside the existing "Data Analyst" (bottom-left) and "iOS Developer" (top-right) badges. Each badge has its own floating animation with a staggered delay.
-- **`alt` attribute updated:** Profile image alt text now reads `Data Analyst, Data Scientist & iOS Developer`.
+### February 2026 — v1.2
+- **Hero image rings fully visible:** The decorative rings around the profile photo were being clipped on the right side by the hero section's `overflow: hidden`. Fixed by adding `margin-right: 5rem` to `.hero-image-wrapper`, giving ring-3 (the outermost, 480px) 10px of clearance from the section edge.
+- **`iOS Developer` badge fully visible:** `badge-ios` moved from `right: -60px` to `right: -10px` so it no longer extends past the section's clipping boundary.
+- **Profile image raised:** Added `margin-top: -3rem` to `.hero-image-wrapper` to lift the image slightly higher within the hero section.
+- **Decorative rings centered on image:** The `.hero-image-ring` `top` value was `50%` which centered rings at the midpoint of the wrapper box (including `padding-top: 80px`), placing them 40px above the actual image center. Fixed by changing to `top: calc(50% + var(--nav-height) / 2)` so rings align precisely on the photo.
 - **CSS changes:**
-  - `css/sections.css` — `.hero-section` switched to `flex-direction: column; align-items: center; text-align: center`. `.hero-subtitle` got `justify-content: center`. `.hero-description` got `margin: 0 auto`. `.hero-cta` and `.hero-stats` got `justify-content: center`. Badge positions adjusted for centered layout. New `.badge-ds` position added.
+  - `css/sections.css` — `.hero-image-wrapper` gained `margin-right: 5rem` and `margin-top: -3rem`. `.badge-ios` changed to `right: -10px`. `.hero-image-ring` `top` changed to `calc(50% + var(--nav-height) / 2)`.
+  - `css/responsive.css` — `margin-right: 0` and `margin-top: 0` added to `.hero-image-wrapper` in the 1024px breakpoint so the column/centered tablet layout is unaffected.
+
+### February 2026 — v1.1
+- **"Data Scientist" badge added:** A third floating badge now appears around the profile photo (top-left), alongside the existing "Data Analyst" (bottom-left) and "iOS Developer" (top-right) badges. The three badges form a triangular arrangement around the image. Each badge has its own floating animation with a staggered delay.
+- **`alt` attribute updated:** Profile image alt text now reads `Data Analyst, Data Scientist & iOS Developer`.
+- **Hero layout:** Side-by-side layout preserved — text content on the left, profile photo on the right.
+- **CSS changes:**
+  - `css/sections.css` — `.badge-ds` position added (`top: 80px; left: -70px`). Existing `.badge-data` (bottom-left) and `.badge-ios` (top-right) positions unchanged.
   - `css/animations.css` — `.badge-ds` animation added (badgeFloat1, 5.5s, 0.8s delay).
-  - `css/responsive.css` — Redundant 1024px hero overrides removed (desktop is already centered).
+  - `css/responsive.css` — 1024px breakpoint hero overrides: collapses to column/centered on tablet with `order: -1` on image wrapper so photo appears above text.
 
 ### February 2026 — v1.0
 - Full portfolio site rebuilt from scratch with dark theme, glassmorphism, animations, modular CSS/JS architecture.
