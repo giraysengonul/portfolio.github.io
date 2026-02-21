@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pandas Projects | Giray Şengönül</title>
+    <link rel="icon" type="image/png" href="../assets/rocket-lunch.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/animations.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/sections.css" />
+    <link rel="stylesheet" href="../css/project-page.css" />
+  </head>
+  <body>
+
+    <nav id="navbar" class="navbar">
+      <div class="nav-container">
+        <a href="../index.html" class="nav-logo">GŞ<span class="logo-dot">.</span></a>
+        <ul class="nav-links">
+          <li><a href="../index.html#about" class="nav-link">About</a></li>
+          <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+          <li><a href="../index.html#skills" class="nav-link">Skills</a></li>
+          <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+          <li><a href="../index.html#contact" class="btn-hire">Hire Me</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="mobile-close" id="mobileClose">✕</button>
+      <ul class="mobile-links">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <header class="page-header">
+      <a href="../index.html#projects" class="back-btn">← Back to Projects</a>
+      <h1 class="page-title"><span class="gradient-text">Pandas</span> Projects</h1>
+      <p class="page-subtitle">Data analysis and exploration projects built with Python and Pandas</p>
+    </header>
+
+    <main class="projects-container">
+      <div id="projectsWrapper"></div>
+    </main>
+
+    <div class="overlay" id="overlay" onclick="closePopup()"></div>
+    <div id="popup" class="popup">
+      <button class="popup-close" onclick="closePopup()" aria-label="Close">✕</button>
+      <h3 id="popupTitle"></h3>
+      <p id="popupDescription"></p>
+      <ul id="popupList"></ul>
+      <a id="popupLink" href="#" target="_blank" rel="noopener noreferrer" class="popup-link">View Project →</a>
+    </div>
+
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+
+    <script src="../projects.js" defer></script>
+    <script>
+      window.onload = () => loadProjects('pandas');
+    </script>
+    <script>
+      const nb = document.getElementById('navbar');
+      window.addEventListener('scroll', () => nb.classList.toggle('scrolled', window.scrollY > 60));
+      const hb = document.getElementById('hamburger');
+      const mm = document.getElementById('mobileMenu');
+      const mc = document.getElementById('mobileClose');
+      if (hb) hb.addEventListener('click', () => mm.classList.add('open'));
+      if (mc) mc.addEventListener('click', () => mm.classList.remove('open'));
+      const btt = document.getElementById('backToTop');
+      window.addEventListener('scroll', () => btt.classList.toggle('visible', window.scrollY > 400));
+      btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    </script>
+  </body>
+</html>
