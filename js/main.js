@@ -317,17 +317,152 @@ function updateProjectCounts() {
 }
 
 /* =============================================
+   SYNC HERO STAT COUNTS WITH REAL DATA
+   Keeps the hero numbers + section subtitles in
+   sync with projects.js / portfolioCerts so they
+   never drift out of date.
+   ============================================= */
+
+function syncDynamicCounts() {
+  const projectCount =
+    typeof projects !== 'undefined' ? projects.length : null;
+  const certCount = portfolioCerts.length;
+
+  // Hero stat counters (read by animations.js via data-target)
+  document.querySelectorAll('.stat-item').forEach((item) => {
+    const label = item.querySelector('.stat-label');
+    const number = item.querySelector('.stat-number[data-target]');
+    if (!label || !number) return;
+
+    const text = label.textContent.trim().toLowerCase();
+    if (text.startsWith('project') && projectCount !== null) {
+      number.dataset.target = projectCount;
+    } else if (text.startsWith('certificate')) {
+      number.dataset.target = certCount;
+    }
+  });
+
+  // Section subtitles
+  const projectsText = document.getElementById('projectsCountText');
+  if (projectsText && projectCount !== null) projectsText.textContent = projectCount;
+
+  const certsText = document.getElementById('certsCountText');
+  if (certsText) certsText.textContent = certCount;
+}
+
+/* =============================================
+   FEATURED / HIGHLIGHTED PROJECTS
+   Pulls a hand-picked set straight from projects.js
+   so the showcase never drifts from the source data.
+   ============================================= */
+
+const FEATURED_TITLES = [
+  'HR Analytics Dashboard – Attrition Insight',
+  'LAPD Crime Statistics Dashboard',
+  'ESG Risk Analysis (S&P 500 Companies)',
+];
+
+const CATEGORY_LABELS = {
+  excel: 'Excel',
+  pandas: 'Pandas',
+  powerbi: 'Power BI',
+  python: 'Python',
+  sql: 'SQL',
+  tableau: 'Tableau',
+};
+
+function renderFeatured() {
+  const grid = document.getElementById('featuredProjects');
+  if (!grid || typeof projects === 'undefined') return;
+
+  const featured = FEATURED_TITLES
+    .map((title) => projects.find((p) => p.title === title))
+    .filter(Boolean);
+
+  if (!featured.length) {
+    grid.remove();
+    return;
+  }
+
+  grid.innerHTML = featured
+    .map((p) => {
+      const label = CATEGORY_LABELS[p.category] || p.category;
+      return `
+      <a href="${p.link}" target="_blank" rel="noopener noreferrer" class="featured-card">
+        <div class="featured-img">
+          <img src="${p.image}" alt="${p.alt || p.title}" loading="lazy" decoding="async" />
+          <span class="featured-badge">${label}</span>
+        </div>
+        <div class="featured-body">
+          <h3>${p.title}</h3>
+          <p>${p.shortDesc}</p>
+          <span class="featured-link">View Project →</span>
+        </div>
+      </a>`;
+    })
+    .join('');
+}
+
+/* =============================================
+   CONTACT FORM (mailto-based, no backend)
+   ============================================= */
+
+function initContactForm() {
+  const form = document.getElementById('contactForm');
+  if (!form) return;
+
+  const status = document.getElementById('cf-status');
+  const EMAIL = 'giraysengonul@gmail.com';
+
+  const setStatus = (msg, type) => {
+    status.textContent = msg;
+    status.className = 'form-status ' + type;
+  };
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const name = form.elements['name'].value.trim();
+    const email = form.elements['email'].value.trim();
+    const message = form.elements['message'].value.trim();
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+    if (!name || !email || !message) {
+      setStatus('Please fill in all fields before sending.', 'error');
+      return;
+    }
+    if (!emailOk) {
+      setStatus('Please enter a valid email address.', 'error');
+      return;
+    }
+
+    const subject = encodeURIComponent(`Portfolio contact from ${name}`);
+    const body = encodeURIComponent(`${message}\n\n— ${name}\n${email}`);
+    window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
+
+    setStatus(
+      `Opening your email app… If nothing happens, reach me directly at ${EMAIL}.`,
+      'success'
+    );
+    form.reset();
+  });
+}
+
+/* =============================================
    INIT ALL
    ============================================= */
 
 document.addEventListener('DOMContentLoaded', () => {
   initLoader();
   renderCertificates();
+  renderFeatured();
   updateProjectCounts();
+  syncDynamicCounts();
   initNavbar();
   initMobileMenu();
   initBackToTop();
   initSmoothScroll();
+  initContactForm();
 
   // Cursor is init after DOM + a tiny delay for interactive elements
   setTimeout(initCursor, 100);

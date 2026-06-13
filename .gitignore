@@ -1,0 +1,9 @@
+# Progress-tracking files — must NOT be pushed to GitHub
+TASK.md
+*.task.md
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.vscode/
+*.log

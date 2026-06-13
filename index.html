@@ -4,11 +4,52 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Giray Şengönül — Data Analyst & Data Scientist. Expert in Python, SQL, Power BI, Tableau, and iOS Development. 43+ projects, 20+ certifications." />
+    <meta name="description" content="Giray Şengönül — Data Analyst & Data Scientist. Expert in Python, SQL, Power BI, Tableau, and iOS Development. 39+ projects, 19+ certifications." />
     <meta name="keywords" content="data analyst, data scientist, python, SQL, power bi, tableau, iOS developer, portfolio, giray sengonul" />
+    <meta name="author" content="Giray Şengönül" />
+    <link rel="canonical" href="https://giraysengonul.cv/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Giray Şengönül" />
+    <meta property="og:url" content="https://giraysengonul.cv/" />
     <meta property="og:title" content="Giray Şengönül | Data Analyst & Data Scientist" />
-    <meta property="og:description" content="Transforming raw data into actionable insights. 43+ projects across data analytics and iOS development." />
+    <meta property="og:description" content="Transforming raw data into actionable insights. 39+ projects across data analytics and iOS development." />
+    <meta property="og:image" content="https://giraysengonul.cv/assets/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Giray Şengönül — Data Analyst & Data Scientist" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Giray Şengönül | Data Analyst & Data Scientist" />
+    <meta name="twitter:description" content="Transforming raw data into actionable insights. 39+ projects across data analytics and iOS development." />
+    <meta name="twitter:image" content="https://giraysengonul.cv/assets/og-image.png" />
+
     <title>Giray Şengönül | Data Analyst &amp; Data Scientist</title>
+
+    <!-- Structured data: Person -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Giray Şengönül",
+      "url": "https://giraysengonul.cv/",
+      "image": "https://giraysengonul.cv/assets/profile-pic.png",
+      "jobTitle": "Data Analyst & Data Scientist",
+      "email": "mailto:giraysengonul@gmail.com",
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Fırat University"
+      },
+      "knowsAbout": ["Data Analysis", "Python", "SQL", "Power BI", "Tableau", "Pandas", "iOS Development", "Swift", "SwiftUI"],
+      "sameAs": [
+        "https://www.linkedin.com/in/giray-sengonul/",
+        "https://github.com/giraysengonul",
+        "https://apps.apple.com/tr/developer/giray-sengonul/id1658040033"
+      ]
+    }
+    </script>
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="./assets/rocket-lunch.png" />
@@ -27,6 +68,9 @@
     <link rel="stylesheet" href="./css/responsive.css" />
   </head>
   <body>
+
+    <!-- Skip to content (accessibility) -->
+    <a href="#hero" class="skip-link">Skip to content</a>
 
     <!-- ===================== LOADING SCREEN ===================== -->
     <div id="loader" class="loader">
@@ -73,7 +117,7 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="mobile-social">
-        <a href="https://www.linkedin.com/in/giray-sengonul-168420318/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/giray-sengonul/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="https://github.com/giraysengonul" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
     </div>
@@ -144,11 +188,18 @@
           <div class="hero-image-ring ring-1"></div>
           <div class="hero-image-ring ring-2"></div>
           <div class="hero-image-ring ring-3"></div>
-          <img
-            src="./assets/profile-pic.png"
-            alt="Giray Şengönül — Data Analyst, Data Scientist &amp; iOS Developer"
-            class="hero-image"
-          />
+          <picture>
+            <source srcset="./assets/profile-pic.webp" type="image/webp" />
+            <img
+              src="./assets/profile-pic.png"
+              alt="Giray Şengönül — Data Analyst, Data Scientist &amp; iOS Developer"
+              class="hero-image"
+              width="796"
+              height="643"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </picture>
           <div class="floating-badge badge-data">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
               <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
@@ -192,7 +243,7 @@
         <div class="about-grid">
           <div class="about-card reveal reveal-left">
             <div class="card-icon">
-              <img src="./assets/experience.png" alt="" />
+              <img src="./assets/experience.png" alt="" loading="lazy" decoding="async" />
             </div>
             <h3>Experience</h3>
             <p class="card-highlight">2+ Years Data Analytics</p>
@@ -205,7 +256,7 @@
 
           <div class="about-card reveal">
             <div class="card-icon">
-              <img src="./assets/education.png" alt="" />
+              <img src="./assets/education.png" alt="" loading="lazy" decoding="async" />
             </div>
             <h3>Education</h3>
             <p class="card-highlight">B.Sc. Computer Engineering</p>
@@ -237,9 +288,14 @@
           <span class="section-tag">Portfolio</span>
           <h2 class="section-title">Featured Projects</h2>
           <p class="section-subtitle">
-            43+ projects spanning data analytics, visualization, and mobile development
+            <span id="projectsCountText">39</span>+ projects spanning data analytics, visualization, and mobile development
           </p>
         </div>
+
+        <!-- Featured / highlighted projects (populated by js/main.js) -->
+        <div id="featuredProjects" class="featured-grid reveal" aria-label="Highlighted projects"></div>
+
+        <h3 class="projects-subheading reveal">Browse all by category</h3>
 
         <div class="projects-grid reveal">
           <a href="./pages/tableau.html" class="project-category-card">
@@ -493,7 +549,7 @@
           <span class="section-tag">Credentials</span>
           <h2 class="section-title">Certificates</h2>
           <p class="section-subtitle">
-            19+ professional certifications from IBM, Google, Coursera, UC Davis &amp; Analyst Builder
+            <span id="certsCountText">19</span>+ professional certifications from IBM, Google, Coursera, UC Davis &amp; Analyst Builder
           </p>
         </div>
       </div>
@@ -515,10 +571,35 @@
           </p>
         </div>
 
+        <form id="contactForm" class="contact-form reveal" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="cf-name">Name</label>
+              <input type="text" id="cf-name" name="name" autocomplete="name" required placeholder="Your name" />
+            </div>
+            <div class="form-field">
+              <label for="cf-email">Email</label>
+              <input type="email" id="cf-email" name="email" autocomplete="email" required placeholder="you@example.com" />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" rows="5" required placeholder="Tell me about your project or opportunity…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit">
+            Send Message
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+              <line x1="22" y1="2" x2="11" y2="13"></line>
+              <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+            </svg>
+          </button>
+          <p id="cf-status" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+
         <div class="contact-grid reveal">
           <a href="mailto:giraysengonul@gmail.com" class="contact-card">
             <div class="contact-icon">
-              <img src="./assets/email.png" alt="" />
+              <img src="./assets/email.png" alt="" loading="lazy" decoding="async" />
             </div>
             <div class="contact-info">
               <h4>Email</h4>
@@ -529,7 +610,7 @@
 
           <a href="https://www.linkedin.com/in/giray-sengonul/" target="_blank" rel="noopener noreferrer" class="contact-card">
             <div class="contact-icon">
-              <img src="./assets/linkedin.png" alt="" />
+              <img src="./assets/linkedin.png" alt="" loading="lazy" decoding="async" />
             </div>
             <div class="contact-info">
               <h4>LinkedIn</h4>
@@ -540,7 +621,7 @@
 
           <a href="https://github.com/giraysengonul" target="_blank" rel="noopener noreferrer" class="contact-card">
             <div class="contact-icon">
-              <img src="./assets/github.png" alt="" />
+              <img src="./assets/github.png" alt="" loading="lazy" decoding="async" />
             </div>
             <div class="contact-info">
               <h4>GitHub</h4>
@@ -568,14 +649,14 @@
             <a href="#contact">Contact</a>
           </nav>
           <div class="footer-social">
-            <a href="https://www.linkedin.com/in/giray-sengonul-168420318/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
-              <img src="./assets/linkedin.png" alt="LinkedIn" />
+            <a href="https://www.linkedin.com/in/giray-sengonul/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+              <img src="./assets/linkedin.png" alt="LinkedIn" loading="lazy" decoding="async" />
             </a>
             <a href="https://github.com/giraysengonul" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
-              <img src="./assets/github.png" alt="GitHub" />
+              <img src="./assets/github.png" alt="GitHub" loading="lazy" decoding="async" />
             </a>
             <a href="mailto:giraysengonul@gmail.com" class="social-link" aria-label="Email">
-              <img src="./assets/email.png" alt="Email" />
+              <img src="./assets/email.png" alt="Email" loading="lazy" decoding="async" />
             </a>
           </div>
         </div>

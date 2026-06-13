@@ -33,6 +33,8 @@
 
   .projects-grid { grid-template-columns: repeat(2, 1fr); }
 
+  .featured-grid { grid-template-columns: repeat(2, 1fr); }
+
   .skills-grid { grid-template-columns: 1fr; }
 
   .contact-grid { grid-template-columns: 1fr 1fr; }
@@ -87,7 +89,13 @@
   /* Projects */
   .projects-grid { grid-template-columns: repeat(2, 1fr); }
 
+  /* Featured */
+  .featured-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto 3rem; }
+
   /* Contact */
+  .contact-form { padding: 1.5rem; }
+  .form-row { grid-template-columns: 1fr; }
+
   .contact-grid {
     grid-template-columns: 1fr;
     max-width: 480px;

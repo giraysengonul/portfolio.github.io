@@ -115,3 +115,32 @@
 
 .certificates-track { animation: slideInfinite 40s linear infinite; }
 .certificates-track:hover { animation-play-state: paused; }
+
+/* =============================================
+   REDUCED MOTION
+   Respect users who prefer minimal animation.
+   ============================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Keep scroll-reveal content visible even without transitions */
+  .reveal,
+  .reveal-left,
+  .reveal-right {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* Freeze the continuously scrolling certificates strip */
+  .certificates-track {
+    animation: none !important;
+  }
+}

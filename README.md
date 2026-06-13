@@ -19,6 +19,8 @@ portfolio.github.io/
 │
 ├── assets/                     ← All static image assets
 │   ├── profile-pic.png
+│   ├── profile-pic.webp         ← WebP variant (hero, faster load)
+│   ├── og-image.png             ← Social share preview (1200×630)
 │   ├── arrow.png
 │   ├── checkmark.png
 │   ├── education.png
@@ -50,7 +52,8 @@ portfolio.github.io/
 │   └── python.html
 │
 ├── projects.js                 ← Project data array + loadProjects() function (root)
-└── certificates.js             ← Old certificates file (unused by new HTML, kept)
+├── robots.txt                  ← Crawl directives + sitemap pointer
+└── sitemap.xml                 ← Search-engine sitemap
 ```
 
 ---
