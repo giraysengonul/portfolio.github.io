@@ -7,15 +7,15 @@
     <meta name="description" content="Giray Şengönül — Data Analyst & Data Scientist. Expert in Python, SQL, Power BI, Tableau, and iOS Development. 39+ projects, 19+ certifications." />
     <meta name="keywords" content="data analyst, data scientist, python, SQL, power bi, tableau, iOS developer, portfolio, giray sengonul" />
     <meta name="author" content="Giray Şengönül" />
-    <link rel="canonical" href="https://giraysengonul.cv/" />
+    <link rel="canonical" href="https://giraysengonul.com/" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Giray Şengönül" />
-    <meta property="og:url" content="https://giraysengonul.cv/" />
+    <meta property="og:url" content="https://giraysengonul.com/" />
     <meta property="og:title" content="Giray Şengönül | Data Analyst & Data Scientist" />
     <meta property="og:description" content="Transforming raw data into actionable insights. 39+ projects across data analytics and iOS development." />
-    <meta property="og:image" content="https://giraysengonul.cv/assets/og-image.png" />
+    <meta property="og:image" content="https://giraysengonul.com/assets/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Giray Şengönül — Data Analyst & Data Scientist" />
@@ -24,7 +24,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Giray Şengönül | Data Analyst & Data Scientist" />
     <meta name="twitter:description" content="Transforming raw data into actionable insights. 39+ projects across data analytics and iOS development." />
-    <meta name="twitter:image" content="https://giraysengonul.cv/assets/og-image.png" />
+    <meta name="twitter:image" content="https://giraysengonul.com/assets/og-image.png" />
 
     <title>Giray Şengönül | Data Analyst &amp; Data Scientist</title>
 
@@ -34,8 +34,8 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Giray Şengönül",
-      "url": "https://giraysengonul.cv/",
-      "image": "https://giraysengonul.cv/assets/profile-pic.png",
+      "url": "https://giraysengonul.com/",
+      "image": "https://giraysengonul.com/assets/profile-pic.png",
       "jobTitle": "Data Analyst & Data Scientist",
       "email": "mailto:giraysengonul@gmail.com",
       "alumniOf": {
@@ -52,12 +52,13 @@
     </script>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="./assets/rocket-lunch.png" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <link rel="alternate icon" type="image/png" href="./assets/rocket-lunch.png" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="./css/variables.css" />
@@ -233,7 +234,7 @@
     <section id="about" class="section about-section" aria-label="About Me">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-tag">About Me</span>
+          <span class="section-tag">// about</span>
           <h2 class="section-title">Who I Am &amp; What I Do</h2>
           <p class="section-subtitle">
             Bridging the gap between complex data and meaningful business insights
@@ -285,15 +286,24 @@
     <section id="projects" class="section projects-section" aria-label="Projects">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-tag">Portfolio</span>
-          <h2 class="section-title">Featured Projects</h2>
+          <span class="section-tag">$ projects --all</span>
+          <h2 class="section-title">Case Studies &amp; Projects</h2>
           <p class="section-subtitle">
             <span id="projectsCountText">39</span>+ projects spanning data analytics, visualization, and mobile development
           </p>
         </div>
 
-        <!-- Featured / highlighted projects (populated by js/main.js) -->
-        <div id="featuredProjects" class="featured-grid reveal" aria-label="Highlighted projects"></div>
+        <!-- Case studies — problem → approach → stack → impact (js/main.js renderCaseStudies) -->
+        <div id="caseStudies" class="case-studies reveal" aria-label="Featured case studies"></div>
+
+        <!-- Live data panel — built from real projects.js data (js/main.js renderDataPanel) -->
+        <section class="data-panel reveal" aria-label="Portfolio by the numbers">
+          <div class="data-panel-head">
+            <span class="data-panel-tag">// portfolio.by_the_numbers</span>
+            <h3 class="data-panel-title">Projects by category</h3>
+          </div>
+          <div id="dataPanel" class="data-panel-chart"></div>
+        </section>
 
         <h3 class="projects-subheading reveal">Browse all by category</h3>
 
@@ -416,7 +426,7 @@
     <section id="skills" class="section skills-section" aria-label="Skills">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-tag">Expertise</span>
+          <span class="section-tag">// skills</span>
           <h2 class="section-title">Skills &amp; Technologies</h2>
           <p class="section-subtitle">
             A versatile skill set spanning data analytics, visualization, and mobile development
@@ -546,7 +556,7 @@
     <section id="certificates" class="section certificates-section" aria-label="Certificates">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-tag">Credentials</span>
+          <span class="section-tag">// credentials</span>
           <h2 class="section-title">Certificates</h2>
           <p class="section-subtitle">
             <span id="certsCountText">19</span>+ professional certifications from IBM, Google, Coursera, UC Davis &amp; Analyst Builder
@@ -560,11 +570,55 @@
       </div>
     </section>
 
+    <!-- ===================== REFERENCES / TESTIMONIALS ===================== -->
+    <section id="references" class="section references-section" aria-label="References">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">// references</span>
+          <h2 class="section-title">What People Say</h2>
+          <p class="section-subtitle">
+            Recommendations from colleagues, mentors, and collaborators
+          </p>
+        </div>
+        <!-- Populated by js/main.js renderTestimonials -->
+        <div id="testimonials" class="testimonials-grid reveal" aria-label="Testimonials"></div>
+      </div>
+    </section>
+
+    <!-- ===================== GITHUB ACTIVITY ===================== -->
+    <section id="github" class="section github-section" aria-label="GitHub activity">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">$ git log --author=giraysengonul</span>
+          <h2 class="section-title">GitHub Activity</h2>
+          <p class="section-subtitle">
+            Live stats pulled straight from my GitHub profile
+          </p>
+        </div>
+
+        <div class="github-grid reveal">
+          <a class="github-card" href="https://github.com/giraysengonul" target="_blank" rel="noopener noreferrer" aria-label="GitHub statistics">
+            <img loading="lazy" decoding="async" alt="Giray Şengönül — GitHub statistics"
+              src="https://github-readme-stats.vercel.app/api?username=giraysengonul&show_icons=true&hide_border=true&bg_color=12151C&title_color=34D399&icon_color=38BDF8&text_color=9BA3AE&ring_color=34D399" />
+          </a>
+          <a class="github-card" href="https://github.com/giraysengonul?tab=repositories" target="_blank" rel="noopener noreferrer" aria-label="Most used languages">
+            <img loading="lazy" decoding="async" alt="Giray Şengönül — most used languages"
+              src="https://github-readme-stats.vercel.app/api/top-langs/?username=giraysengonul&layout=compact&hide_border=true&bg_color=12151C&title_color=34D399&text_color=9BA3AE" />
+          </a>
+        </div>
+
+        <a class="github-graph reveal" href="https://github.com/giraysengonul" target="_blank" rel="noopener noreferrer" aria-label="GitHub contribution graph">
+          <img loading="lazy" decoding="async" alt="Giray Şengönül — GitHub contribution graph"
+            src="https://ghchart.rshah.org/34D399/giraysengonul" />
+        </a>
+      </div>
+    </section>
+
     <!-- ===================== CONTACT SECTION ===================== -->
     <section id="contact" class="section contact-section" aria-label="Contact">
       <div class="container">
         <div class="section-header reveal">
-          <span class="section-tag">Contact</span>
+          <span class="section-tag">$ contact</span>
           <h2 class="section-title">Let's Work Together</h2>
           <p class="section-subtitle">
             Open to new opportunities, collaborations, and interesting projects
@@ -646,6 +700,8 @@
             <a href="#projects">Projects</a>
             <a href="#skills">Skills</a>
             <a href="#certificates">Certificates</a>
+            <a href="#references">References</a>
+            <a href="#github">GitHub</a>
             <a href="#contact">Contact</a>
           </nav>
           <div class="footer-social">
@@ -671,6 +727,7 @@
 
     <!-- ===================== SCRIPTS ===================== -->
     <script src="./projects.js"></script>
+    <script src="./js/content-data.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/animations.js"></script>
   </body>

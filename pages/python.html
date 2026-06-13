@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Python Projects | Giray Şengönül</title>
-    <link rel="icon" type="image/png" href="../assets/rocket-lunch.png" />
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+    <link rel="alternate icon" type="image/png" href="../assets/rocket-lunch.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../css/variables.css" />
     <link rel="stylesheet" href="../css/base.css" />
     <link rel="stylesheet" href="../css/animations.css" />
@@ -68,17 +69,6 @@
     <script>
       window.onload = () => loadProjects('python');
     </script>
-    <script>
-      const nb = document.getElementById('navbar');
-      window.addEventListener('scroll', () => nb.classList.toggle('scrolled', window.scrollY > 60));
-      const hb = document.getElementById('hamburger');
-      const mm = document.getElementById('mobileMenu');
-      const mc = document.getElementById('mobileClose');
-      if (hb) hb.addEventListener('click', () => mm.classList.add('open'));
-      if (mc) mc.addEventListener('click', () => mm.classList.remove('open'));
-      const btt = document.getElementById('backToTop');
-      window.addEventListener('scroll', () => btt.classList.toggle('visible', window.scrollY > 400));
-      btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-    </script>
+    <script src="../js/page.js" defer></script>
   </body>
 </html>

@@ -20,13 +20,13 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
-  cursor: none;
 }
 
-/* All interactive elements also hide cursor on desktop */
-a, button, [role="button"], input, label, select, textarea,
-.project-category-card, .contact-card, .cert-card, .about-card,
-.btn, .btn-hire, .back-to-top, .mobile-close, .hamburger {
+/* Hide the native cursor only when the custom cursor is active
+   (added by js/main.js on desktop). Pages without the custom cursor
+   keep a normal pointer. */
+body.custom-cursor,
+body.custom-cursor * {
   cursor: none;
 }
 
@@ -47,7 +47,7 @@ a, button, [role="button"], input, label, select, textarea,
 
 /* Selection */
 ::selection {
-  background: rgba(102, 126, 234, 0.3);
+  background: rgba(var(--accent-rgb), 0.3);
   color: var(--text-primary);
 }
 
@@ -86,7 +86,7 @@ img {
 ul { list-style: none; }
 
 button {
-  cursor: none;
+  cursor: pointer;
   border: none;
   background: none;
   font-family: var(--font-body);
@@ -191,7 +191,7 @@ button {
   position: fixed;
   width: 36px;
   height: 36px;
-  border: 1.5px solid rgba(102, 126, 234, 0.5);
+  border: 1.5px solid rgba(var(--accent-rgb), 0.5);
   border-radius: 50%;
   pointer-events: none;
   z-index: 9998;
@@ -207,7 +207,7 @@ button {
 .cursor-ring.hover {
   width: 56px;
   height: 56px;
-  border-color: rgba(0, 210, 255, 0.35);
+  border-color: rgba(var(--accent-2-rgb), 0.35);
 }
 
 /* =============================================

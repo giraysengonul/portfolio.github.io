@@ -85,7 +85,7 @@
 }
 
 .project-card:hover {
-  border-color: rgba(102, 126, 234, 0.3);
+  border-color: rgba(var(--accent-rgb), 0.3);
   transform: translateY(-6px);
   box-shadow: var(--shadow-glow), var(--shadow-card);
 }
@@ -141,26 +141,26 @@
 }
 
 .project-button.details {
-  background: rgba(102, 126, 234, 0.12);
+  background: rgba(var(--accent-rgb), 0.12);
   color: var(--color-primary);
-  border: 1px solid rgba(102, 126, 234, 0.2);
+  border: 1px solid rgba(var(--accent-rgb), 0.2);
 }
 
 .project-button.details:hover {
-  background: rgba(102, 126, 234, 0.22);
-  border-color: rgba(102, 126, 234, 0.4);
+  background: rgba(var(--accent-rgb), 0.22);
+  border-color: rgba(var(--accent-rgb), 0.4);
 }
 
 .project-button.link {
   background: var(--gradient-primary);
   color: white;
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.25);
+  box-shadow: 0 4px 15px rgba(var(--accent-rgb), 0.25);
   margin-top: 0;
 }
 
 .project-button.link:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 6px 20px rgba(var(--accent-rgb), 0.4);
 }
 
 /* =============================================
@@ -257,12 +257,12 @@
   font-weight: 600;
   text-decoration: none;
   transition: var(--transition-base);
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 4px 15px rgba(var(--accent-rgb), 0.3);
 }
 
 .popup-link:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+  box-shadow: 0 8px 25px rgba(var(--accent-rgb), 0.5);
 }
 
 /* =============================================

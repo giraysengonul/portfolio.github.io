@@ -1,6 +1,6 @@
 # Giray Şengönül — Portfolio Site
 
-> **Live URL:** [giraysengonul.cv](https://giraysengonul.cv)
+> **Live URL:** [giraysengonul.com](https://giraysengonul.com)
 > **GitHub Pages:** `giraysengonul.github.io`
 
 A fully custom, professional dark-theme portfolio site for a Data Analyst, Data Scientist, and former iOS Developer. Rebuilt from scratch with modern CSS design patterns, animation systems, and a clean modular architecture.
@@ -13,7 +13,7 @@ A fully custom, professional dark-theme portfolio site for a Data Analyst, Data 
 portfolio.github.io/
 │
 ├── index.html                  ← Main portfolio page (rebuilt)
-├── CNAME                       ← Custom domain: giraysengonul.cv
+├── CNAME                       ← Custom domain: giraysengonul.com
 ├── LICENSE
 ├── README.md                   ← This file
 │
@@ -28,7 +28,8 @@ portfolio.github.io/
 │   ├── experience.png
 │   ├── github.png
 │   ├── linkedin.png
-│   └── rocket-lunch.png        ← Favicon
+│   ├── favicon.svg             ← Terminal-prompt monogram favicon (primary)
+│   └── rocket-lunch.png        ← PNG favicon fallback
 │
 ├── css/                        ← Modular CSS (new)
 │   ├── variables.css           ← Design tokens (colors, fonts, spacing, etc.)
@@ -39,9 +40,11 @@ portfolio.github.io/
 │   ├── responsive.css          ← Media queries (1280, 1024, 768, 480px)
 │   └── project-page.css        ← Styles for project detail pages
 │
-├── js/                         ← Modular JavaScript (new)
-│   ├── main.js                 ← Core functionality + certificate data & rendering
-│   └── animations.js           ← Scroll reveal, typing effect, counters, skill bars
+├── js/                         ← Modular JavaScript
+│   ├── main.js                 ← Core + certificates, case studies, data panel, testimonials
+│   ├── content-data.js         ← Case-study & testimonial content data
+│   ├── animations.js           ← Scroll reveal, typing effect, counters, skill bars
+│   └── page.js                 ← Shared interactions for project detail pages
 │
 ├── pages/                      ← Project detail pages (new, redesigned)
 │   ├── tableau.html
@@ -60,25 +63,29 @@ portfolio.github.io/
 
 ## Design System
 
-### Color Palette
+### Color Palette — "Data Terminal"
 | Token | Value | Usage |
 |---|---|---|
-| `--bg-primary` | `#050d1a` | Page background |
-| `--bg-secondary` | `#0a1628` | Footer, alternate sections |
-| `--bg-glass` | `rgba(255,255,255,0.07)` | Card backgrounds |
-| `--color-primary` | `#667eea` | Indigo — primary brand |
-| `--color-secondary` | `#764ba2` | Purple — gradient pair |
-| `--color-accent` | `#00d2ff` | Cyan — highlights |
-| `--gradient-primary` | `indigo → purple` | Buttons, bars, accents |
-| `--gradient-text` | `indigo → cyan` | Gradient text |
-| `--text-primary` | `#f8fafc` | Headings |
-| `--text-secondary` | `#cbd5e1` | Body text |
-| `--text-muted` | `#64748b` | Subtitles, labels |
+| `--bg-primary` | `#0a0b0f` | Page background (near-black) |
+| `--bg-secondary` | `#0e1016` | Footer, alternate sections |
+| `--bg-elevated` | `#12151c` | Data panel, GitHub cards |
+| `--bg-glass` | `rgba(255,255,255,0.035)` | Card backgrounds |
+| `--accent` | `#34d399` | Emerald — primary signal (`--accent-rgb`) |
+| `--accent-2` | `#38bdf8` | Sky — secondary signal (`--accent-2-rgb`) |
+| `--accent-warm` | `#fbbf24` | Rare terminal highlight |
+| `--gradient-signal` | `emerald → sky` | Buttons, bars, gradient text |
+| `--text-primary` | `#e6e8eb` | Headings |
+| `--text-secondary` | `#9ba3ae` | Body text |
+| `--text-muted` | `#5b6573` | Subtitles, labels |
+
+> All accent colours are centralized as tokens (incl. `--accent-rgb` /
+> `--accent-2-rgb` for `rgba()`), so the whole site re-themes from `variables.css`.
 
 ### Typography
 - **Headings:** Space Grotesk (700–800 weight)
 - **Body:** Inter (300–600 weight)
-- Both loaded from Google Fonts
+- **Mono (data/terminal accents):** JetBrains Mono — stats, metrics, section tags, badges
+- All loaded from Google Fonts
 
 ---
 
@@ -162,7 +169,7 @@ In `index.html`, add a new `.skill-item` block inside the relevant `.skills-colu
 - **Vanilla JavaScript** — No frameworks, no dependencies
 - **Google Fonts** — Space Grotesk + Inter
 - **GitHub Pages** — Hosting
-- **Custom Domain** — `giraysengonul.cv` via CNAME
+- **Custom Domain** — `giraysengonul.com` via CNAME
 
 ---
 
@@ -178,6 +185,15 @@ In `index.html`, add a new `.skill-item` block inside the relevant `.skills-colu
 ---
 
 ## Changelog
+
+### June 2026 — v2.0 · "Data Terminal" redesign
+- **New visual identity:** Replaced the generic indigo/purple theme with a near-black, monospace-forward "Data Terminal" system (emerald `#34d399` + sky `#38bdf8` signal colours). All accent colours centralized as tokens (`--accent`, `--accent-rgb`, …) in `css/variables.css`.
+- **Case studies:** "Featured Projects" replaced with structured Problem → Approach → Stack → Impact cards (`js/content-data.js` → `renderCaseStudies()`).
+- **Live data panel:** Animated "Projects by category" bar chart built from real `projects.js` data — no chart library.
+- **References & GitHub:** New testimonials section (`renderTestimonials()`) + live GitHub stats / top-languages / contribution graph.
+- **Branding:** New terminal-prompt SVG favicon (`assets/favicon.svg`) + regenerated OG image in the new palette.
+- **Cleanup & fixes:** Shared `js/page.js` replaces duplicated inline scripts in the 6 project pages; fixed an invisible-cursor bug (native cursor now hidden only when the custom cursor is active); JetBrains Mono added site-wide.
+- **Domain:** Migrated `giraysengonul.cv` → `giraysengonul.com`.
 
 ### February 2026 — v1.4
 - **Dynamic project counts:** Project category card counts are now automatically calculated from the `projects` array in `projects.js`. Adding or removing projects from any category instantly updates the displayed count on the homepage without manual editing.
@@ -221,4 +237,4 @@ In `index.html`, add a new `.skill-item` block inside the relevant `.skills-colu
 
 ---
 
-*Last updated: February 2026*
+*Last updated: June 2026*

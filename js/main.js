@@ -171,6 +171,11 @@ function initCursor() {
   const ring = document.getElementById('cursor-ring');
   if (!cursor || !ring) return;
 
+  // Only take over the cursor on real pointer devices; otherwise leave
+  // the native cursor (keeps the custom cursor off touch/coarse devices).
+  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+  document.body.classList.add('custom-cursor');
+
   let mouseX = 0, mouseY = 0;
   let ringX = 0, ringY = 0;
 
@@ -351,16 +356,8 @@ function syncDynamicCounts() {
 }
 
 /* =============================================
-   FEATURED / HIGHLIGHTED PROJECTS
-   Pulls a hand-picked set straight from projects.js
-   so the showcase never drifts from the source data.
+   CATEGORY LABELS (shared)
    ============================================= */
-
-const FEATURED_TITLES = [
-  'HR Analytics Dashboard – Attrition Insight',
-  'LAPD Crime Statistics Dashboard',
-  'ESG Risk Analysis (S&P 500 Companies)',
-];
 
 const CATEGORY_LABELS = {
   excel: 'Excel',
@@ -371,35 +368,190 @@ const CATEGORY_LABELS = {
   tableau: 'Tableau',
 };
 
-function renderFeatured() {
-  const grid = document.getElementById('featuredProjects');
-  if (!grid || typeof projects === 'undefined') return;
+/* Tiny HTML-escape helper for data-driven strings */
+function esc(str) {
+  return String(str == null ? '' : str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
 
-  const featured = FEATURED_TITLES
-    .map((title) => projects.find((p) => p.title === title))
-    .filter(Boolean);
+/* =============================================
+   CASE STUDIES — Problem → Approach → Stack → Impact
+   Reads from content-data.js (caseStudies).
+   ============================================= */
 
-  if (!featured.length) {
+function renderCaseStudies() {
+  const grid = document.getElementById('caseStudies');
+  if (!grid) return;
+  if (typeof caseStudies === 'undefined' || !caseStudies.length) {
     grid.remove();
     return;
   }
 
-  grid.innerHTML = featured
-    .map((p) => {
-      const label = CATEGORY_LABELS[p.category] || p.category;
+  grid.innerHTML = caseStudies
+    .map((c) => {
+      const metrics = (c.metrics || [])
+        .map(
+          (m) => `
+          <div class="case-metric">
+            <span class="cm-value">${esc(m.value)}</span>
+            <span class="cm-label">${esc(m.label)}</span>
+          </div>`
+        )
+        .join('');
+
+      const approach = (c.approach || [])
+        .map((a) => `<li>${esc(a)}</li>`)
+        .join('');
+
+      const stack = (c.stack || [])
+        .map((s) => `<span class="stack-tag">${esc(s)}</span>`)
+        .join('');
+
       return `
-      <a href="${p.link}" target="_blank" rel="noopener noreferrer" class="featured-card">
-        <div class="featured-img">
-          <img src="${p.image}" alt="${p.alt || p.title}" loading="lazy" decoding="async" />
-          <span class="featured-badge">${label}</span>
+      <article class="case-card">
+        <a class="case-media" href="${esc(c.link)}" target="_blank" rel="noopener noreferrer" tabindex="-1" aria-hidden="true">
+          <img src="${esc(c.image)}" alt="${esc(c.alt || c.title)}" loading="lazy" decoding="async" />
+          <span class="case-badge">${esc(c.badge)}</span>
+        </a>
+        <div class="case-body">
+          <div class="case-metrics">${metrics}</div>
+          <h3 class="case-title">${esc(c.title)}</h3>
+          <p class="case-line"><span class="case-kicker">Problem</span>${esc(c.problem)}</p>
+          <div class="case-line">
+            <span class="case-kicker">Approach</span>
+            <ul class="case-approach">${approach}</ul>
+          </div>
+          <p class="case-line"><span class="case-kicker accent">Impact</span>${esc(c.outcome)}</p>
+          <div class="case-stack">${stack}</div>
+          <a class="case-link" href="${esc(c.link)}" target="_blank" rel="noopener noreferrer">View case study →</a>
         </div>
-        <div class="featured-body">
-          <h3>${p.title}</h3>
-          <p>${p.shortDesc}</p>
-          <span class="featured-link">View Project →</span>
-        </div>
-      </a>`;
+      </article>`;
     })
+    .join('');
+}
+
+/* =============================================
+   LIVE DATA PANEL — "Projects by category"
+   Built from REAL projects.js data (no dependencies).
+   Animated horizontal bars + accessible hover tooltips.
+   ============================================= */
+
+function renderDataPanel() {
+  const host = document.getElementById('dataPanel');
+  if (!host || typeof projects === 'undefined') return;
+
+  const counts = Object.keys(CATEGORY_LABELS)
+    .map((key) => ({
+      key,
+      label: CATEGORY_LABELS[key],
+      count: projects.filter((p) => p.category === key).length,
+    }))
+    .filter((d) => d.count > 0)
+    .sort((a, b) => b.count - a.count);
+
+  if (!counts.length) {
+    host.closest('.data-panel')?.remove();
+    return;
+  }
+
+  const max = Math.max(...counts.map((d) => d.count));
+  const total = counts.reduce((s, d) => s + d.count, 0);
+
+  const rows = counts
+    .map((d) => {
+      const pct = Math.round((d.count / max) * 100);
+      const share = Math.round((d.count / total) * 100);
+      return `
+      <div class="bar-row" title="${esc(d.label)} — ${d.count} projects (${share}% of total)">
+        <span class="bar-label">${esc(d.label)}</span>
+        <div class="bar-track">
+          <div class="bar-fill" data-w="${pct}" style="width:0%">
+            <span class="bar-val">${d.count}</span>
+          </div>
+        </div>
+      </div>`;
+    })
+    .join('');
+
+  host.innerHTML = `
+    <div class="bars">${rows}</div>
+    <div class="data-panel-foot">
+      <span><span class="dp-num">${total}</span> total projects</span>
+      <span><span class="dp-num">${counts.length}</span> categories</span>
+    </div>`;
+
+  // Animate bars in when the panel scrolls into view
+  const fills = host.querySelectorAll('.bar-fill');
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const grow = () =>
+    fills.forEach((f, i) => {
+      const apply = () => (f.style.width = f.dataset.w + '%');
+      reduce ? apply() : setTimeout(apply, 120 + i * 90);
+    });
+
+  if ('IntersectionObserver' in window) {
+    const obs = new IntersectionObserver(
+      (entries, o) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            grow();
+            o.disconnect();
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+    obs.observe(host);
+  } else {
+    grow();
+  }
+}
+
+/* =============================================
+   TESTIMONIALS — reads content-data.js (testimonials)
+   ============================================= */
+
+function initials(name) {
+  const clean = String(name || '').replace(/\[.*?\]/g, '').trim();
+  if (!clean) return '“';
+  return clean
+    .split(/\s+/)
+    .slice(0, 2)
+    .map((w) => w[0])
+    .join('')
+    .toUpperCase();
+}
+
+function renderTestimonials() {
+  const grid = document.getElementById('testimonials');
+  if (!grid) return;
+  if (typeof testimonials === 'undefined' || !testimonials.length) {
+    grid.closest('.references-section')?.remove();
+    return;
+  }
+
+  grid.innerHTML = testimonials
+    .map(
+      (t) => `
+      <figure class="testimonial-card${t.placeholder ? ' is-placeholder' : ''}">
+        <blockquote class="testimonial-quote">${esc(t.quote)}</blockquote>
+        <figcaption class="testimonial-meta">
+          <span class="testimonial-avatar" aria-hidden="true">${esc(initials(t.name))}</span>
+          <span class="testimonial-who">
+            <span class="testimonial-name">${esc(t.name)}</span>
+            ${t.role ? `<span class="testimonial-role">${esc(t.role)}</span>` : ''}
+          </span>
+          ${
+            t.source
+              ? `<a class="testimonial-source" href="${esc(t.source)}" target="_blank" rel="noopener noreferrer" aria-label="Source on LinkedIn">in ↗</a>`
+              : ''
+          }
+        </figcaption>
+      </figure>`
+    )
     .join('');
 }
 
@@ -455,7 +607,9 @@ function initContactForm() {
 document.addEventListener('DOMContentLoaded', () => {
   initLoader();
   renderCertificates();
-  renderFeatured();
+  renderCaseStudies();
+  renderDataPanel();
+  renderTestimonials();
   updateProjectCounts();
   syncDynamicCounts();
   initNavbar();

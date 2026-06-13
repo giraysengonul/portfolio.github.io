@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://giraysengonul.cv/</loc>
+    <loc>https://giraysengonul.com/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://giraysengonul.cv/pages/tableau.html</loc>
+    <loc>https://giraysengonul.com/pages/tableau.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://giraysengonul.cv/pages/powerbi.html</loc>
+    <loc>https://giraysengonul.com/pages/powerbi.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://giraysengonul.cv/pages/pandas.html</loc>
+    <loc>https://giraysengonul.com/pages/pandas.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://giraysengonul.cv/pages/sql.html</loc>
+    <loc>https://giraysengonul.com/pages/sql.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://giraysengonul.cv/pages/excel.html</loc>
+    <loc>https://giraysengonul.com/pages/excel.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://giraysengonul.cv/pages/python.html</loc>
+    <loc>https://giraysengonul.com/pages/python.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

@@ -1,33 +1,48 @@
 :root {
-  /* Background Colors */
-  --bg-primary: #050d1a;
-  --bg-secondary: #0a1628;
-  --bg-card: rgba(255, 255, 255, 0.04);
-  --bg-glass: rgba(255, 255, 255, 0.07);
-  --border-glass: rgba(255, 255, 255, 0.1);
-  --border-subtle: rgba(255, 255, 255, 0.06);
+  /* =========================================================
+     DATA TERMINAL — design tokens
+     Near-black base · emerald + sky signal · mono-forward
+     ========================================================= */
 
-  /* Brand Colors */
-  --color-primary: #667eea;
-  --color-secondary: #764ba2;
-  --color-accent: #00d2ff;
-  --color-success: #10b981;
+  /* Background Colors */
+  --bg-primary: #0a0b0f;
+  --bg-secondary: #0e1016;
+  --bg-elevated: #12151c;
+  --bg-card: rgba(255, 255, 255, 0.03);
+  --bg-glass: rgba(255, 255, 255, 0.035);
+  --border-glass: rgba(255, 255, 255, 0.08);
+  --border-subtle: rgba(255, 255, 255, 0.05);
+
+  /* Signal / accent colors (single source of truth) */
+  --accent: #34d399;          /* emerald */
+  --accent-rgb: 52, 211, 153;
+  --accent-2: #38bdf8;        /* sky */
+  --accent-2-rgb: 56, 189, 248;
+  --accent-warm: #fbbf24;     /* rare terminal highlight */
+
+  /* Backward-compatible aliases (used across legacy CSS) */
+  --color-primary: var(--accent);
+  --color-secondary: var(--accent-2);
+  --color-accent: var(--accent-2);
+  --color-success: var(--accent);
 
   /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --gradient-accent: linear-gradient(135deg, #00d2ff 0%, #667eea 100%);
-  --gradient-text: linear-gradient(135deg, #667eea 0%, #00d2ff 100%);
-  --gradient-hero-bg: radial-gradient(ellipse at 70% 30%, rgba(102, 126, 234, 0.15) 0%, transparent 60%),
-                      radial-gradient(ellipse at 30% 70%, rgba(118, 75, 162, 0.1) 0%, transparent 60%);
+  --gradient-primary: linear-gradient(135deg, #34d399 0%, #38bdf8 100%);
+  --gradient-accent: linear-gradient(135deg, #38bdf8 0%, #34d399 100%);
+  --gradient-text: linear-gradient(135deg, #34d399 0%, #38bdf8 100%);
+  --gradient-signal: linear-gradient(135deg, #34d399 0%, #38bdf8 100%);
+  --gradient-hero-bg: radial-gradient(ellipse at 70% 30%, rgba(52, 211, 153, 0.12) 0%, transparent 60%),
+                      radial-gradient(ellipse at 30% 70%, rgba(56, 189, 248, 0.08) 0%, transparent 60%);
 
   /* Text Colors */
-  --text-primary: #f8fafc;
-  --text-secondary: #cbd5e1;
-  --text-muted: #64748b;
+  --text-primary: #e6e8eb;
+  --text-secondary: #9ba3ae;
+  --text-muted: #5b6573;
 
   /* Typography */
   --font-heading: 'Space Grotesk', system-ui, sans-serif;
   --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', 'Cascadia Code', monospace;
 
   /* Layout */
   --container-max: 1200px;
@@ -41,12 +56,12 @@
   --radius-full: 9999px;
 
   /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.5);
-  --shadow-glow: 0 0 40px rgba(102, 126, 234, 0.2);
-  --shadow-glow-strong: 0 0 60px rgba(102, 126, 234, 0.35);
-  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.05);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 40px rgba(var(--accent-rgb), 0.18);
+  --shadow-glow-strong: 0 0 60px rgba(var(--accent-rgb), 0.32);
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.45), 0 1px 0 rgba(255, 255, 255, 0.04);
 
   /* Transitions */
   --transition-fast: 0.15s ease;
