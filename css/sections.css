@@ -536,6 +536,70 @@
 }
 
 /* =============================================
+   SERVICES SECTION
+   ============================================= */
+
+.services-section { background: transparent; }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.service-card {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card .card-icon { margin: 0 0 1.25rem; }
+
+.service-icon svg {
+  width: 28px;
+  height: 28px;
+  color: var(--color-primary);
+}
+
+.service-card .card-highlight {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+.card-text-tr {
+  display: block;
+  margin-top: 0.6rem;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+
+.services-cta {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  text-align: center;
+}
+
+.services-cta > p {
+  margin: 0;
+  max-width: 54ch;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.services-cta > p span[lang="tr"] { color: var(--text-muted); }
+
+.services-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+/* =============================================
    PROJECTS SECTION
    ============================================= */
 
